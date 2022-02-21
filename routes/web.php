@@ -2,15 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
-//Homepage Route
-Route::get('/', 'App\Http\Controllers\PagesController@homepage')->name('homepage');
-//Homepage Route
 
-//About Us Route
-Route::get('/about-us', 'App\Http\Controllers\PagesController@about')->name('about');
-//About Us Route
+Route::get('/', function () {
+    return view('welcome');
+});
+
+//auth route 
+Route::group(['middleware' => ['auth','verified']], function() { 
+    Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+});
+///////////////////////////////////////// ADMIN ROUTES ////////////////////////////////////////////
 
 
-//Contact Route
-Route::get('/contact-us', 'App\Http\Controllers\PagesController@contact')->name('contact');
-//Contact Route
+
+require __DIR__.'/auth.php';
