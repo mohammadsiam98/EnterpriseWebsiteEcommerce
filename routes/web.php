@@ -3,16 +3,20 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
+// This is main Home page Route Url Start
+
+Route::get('/',function(){
     return view('pages.homepage.index');
 });
 
-//auth route 
-Route::group(['middleware' => ['auth','verified']], function() { 
-    Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+
+// //auth route 
+// Route::group(['middleware' => ['auth','verified']], function() { 
+//     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+// });
+
+
+Route::prefix('')->group(function(){    
+    Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard')->middleware('auth','verified');
 });
-///////////////////////////////////////// ADMIN ROUTES ////////////////////////////////////////////
-
-
-
 require __DIR__.'/auth.php';
