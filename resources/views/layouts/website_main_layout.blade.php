@@ -226,6 +226,10 @@
                                         <!-- End Language -->
                                     </div>
                                 </li>
+                                @if (Route::has('login'))
+                                @auth
+                                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                                @else
                                 <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
                                     <!-- Account Sidebar Toggle Button -->
                                     <a id="sidebarNavToggler" href="javascript:;" role="button" class="u-header-topbar__nav-link" aria-controls="sidebarContent" aria-haspopup="true" aria-expanded="false" data-unfold-event="click" data-unfold-hide-on-scroll="false" data-unfold-target="#sidebarContent" data-unfold-type="css-animation" data-unfold-animation-in="fadeInRight" data-unfold-animation-out="fadeOutRight" data-unfold-duration="500">
@@ -233,6 +237,8 @@
                                     </a>
                                     <!-- End Account Sidebar Toggle Button -->
                                 </li>
+                                @endif
+                                @endauth
                             </ul>
                         </div>
                     </div>
