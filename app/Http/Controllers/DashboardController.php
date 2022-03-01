@@ -19,8 +19,12 @@ class DashboardController extends Controller
         }
         elseif(Auth::user()->hasRole('admin'))
         {
-            return view('dashboard');
+            return view('pages.theme.userdashboard');
         }
+    }
+    public function userDashboard()
+    {
+        return view('pages.theme.userdashboard');
     }
     
    

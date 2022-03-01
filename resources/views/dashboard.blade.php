@@ -13,7 +13,7 @@
                     You're logged in!
 
                 </div>
-                <h1><a href="{{route('Admincontroller.dashboard')}}"></a></h1>
+                <h1><a href=""></a></h1>
 
             </div>
         </div>
