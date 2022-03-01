@@ -18,7 +18,11 @@ Route::get('/',function(){
 
 Route::prefix('')->group(function(){    
     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard')->middleware('auth','verified');
+    #user profile show
+    Route::get('/user-profile', 'App\Http\Controllers\usersController@show')->name('user.profile');
+    #user profile edit
     Route::get('/user-profile/edit', 'App\Http\Controllers\usersController@edit')->name('user.edit');
+    #user profile update
     Route::put('/user-profile/update/', 'App\Http\Controllers\usersController@update')->name('user.update');
 
 });

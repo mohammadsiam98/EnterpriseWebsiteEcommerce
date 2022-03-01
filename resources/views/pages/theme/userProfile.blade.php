@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="../../userAssets/assets/css/vendors/feather-icon.css">
     <!-- Plugins css start-->
     <link rel="stylesheet" type="text/css" href="../../userAssets/assets/css/vendors/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../../userAssets/assets/css/vendors/photoswipe.css">
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="../../userAssets/assets/css/vendors/bootstrap.css">
@@ -83,16 +84,17 @@
                 </div>
                 <script class="result-template" type="text/x-handlebars-template">
                     <div class="ProfileCard u-cf">                        
-                <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
-                <div class="ProfileCard-details">
-                <div class="ProfileCard-realName"></div>
-                </div>
-                </div>
-              </script>
+            <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
+            <div class="ProfileCard-details">
+            <div class="ProfileCard-realName"></div>
+            </div>
+            </div>
+          </script>
                 <script class="empty-template" type="text/x-handlebars-template"><div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div></script>
             </div>
         </div>
-        <!-- Page Header Ends-->
+        <!-- Page Header End-->
+
         <!-- Page Body Start-->
         <div class="page-body-wrapper">
             <!-- Page Sidebar Start-->
@@ -102,8 +104,7 @@
                         <div class="back-btn"><i class="fa fa-angle-left"></i></div>
                         <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
                     </div>
-                    <div class="logo-icon-wrapper"><a href="{{route('dashboard')}}"><img class="img-fluid" src="../../userAssets/assets/images/logo/logo-icon.png" alt=""></a></div>
-
+                    <div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid" src="../../userAssets/assets/images/logo/logo-icon.png" alt=""></a></div>
 
                     {{-- navbar Start --}}
                     <nav class="sidebar-main">
@@ -139,7 +140,6 @@
                     </nav>
                     {{-- navbar End --}}
 
-
                 </div>
             </div>
             <!-- Page Sidebar Ends-->
@@ -147,12 +147,14 @@
                 <div class="container-fluid">
                     <div class="page-title">
                         <div class="row">
-
+                            <div class="col-6">
+                                <h3 style="font-family: 'Poppins', sans-serif; font-size:30px">User Profile</h3>
+                            </div>
                             <div class="col-6">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html"> <i data-feather="home"></i></a></li>
-                                    <li class="breadcrumb-item">Form Controls</li>
-                                    <li class="breadcrumb-item active">Base inputs</li>
+                                    <li class="breadcrumb-item">Users</li>
+                                    <li class="breadcrumb-item active">User Profile</li>
                                 </ol>
                             </div>
                         </div>
@@ -160,55 +162,69 @@
                 </div>
                 <!-- Container-fluid starts-->
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 style="font-family: 'Poppins', sans-serif; font-size:30px">Update your profile</h5>
+                    <div class="user-profile">
+                        <div class="row">
+                            <!-- user profile first-style start-->
+                            <div class="col-sm-12">
+                                <div class="card hovercard text-center">
+                                    <div class="cardheader"></div>
+                                    <div class="user-image">
+                                        <div class="avatar"><img alt="" src="../../userAssets/assets/images/user/7.jpg"></div>
+                                        <div class="icon-wrapper"><a href="{{route('user.edit')}}"><i class="icofont icofont-pencil-alt-5"></i></a></div>
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-lg-12 order-sm-0 order-xl-1">
+                                                <div class="user-designation">
+                                                    <div class="title"><a target="_blank" href="" style="font-family: 'Poppins', sans-serif; font-size:30px; text-align:center;">{{$user->name}}</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
                                 </div>
-                                <form class="form theme-form" action="{{route('user.update')}}" method="POST">
-                                    @csrf
-                                    @method('PUT')
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="exampleFormControlInput15">Email address</label>
-                                                    <input style="font-family: 'Poppins', sans-serif; font-size:20px" class="form-control input-air-primary" id="exampleFormControlInput15" type="email" name="email" placeholder="name@example.com" value="{{$user->email}}" disabled>
-                                                    <label class="form-label" for="exampleFormControlInput15" style="color: red; font-family: 'Poppins', sans-serif; font-size:14px">You can not change your email address</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="exampleFormControlInput15">Name</label>
-                                                    <input style="font-family: 'Poppins', sans-serif; font-size:20px" class="form-control input-air-primary" id="" type="text" name="name" value="{{$user->name}}">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="exampleFormControlInput15">Address</label>
-                                                    <input style="font-family: 'Poppins', sans-serif; font-size:20px" class="form-control input-air-primary" id="" type="text" name="address" value="{{$user->address}}">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="exampleFormControlInput15">Telephone</label>
-                                                    <input style="font-family: 'Poppins', sans-serif; font-size:20px" class="form-control input-air-primary" id="" type="text" name="telephone" value="{{$user->telephone}}">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer text-end">
-                                        <button class="btn btn-primary btn-large" type="submit">Update</button>
-                                    </div>
-                                </form>
                             </div>
+                            <div class="col-sm-12 col-xl-6">
+                                <div class="card">
+                                    <div class="card-header bg-primary">
+                                        <h5 class="text-white" style="text-align: center">User's Name</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="mb-0" style="font-family: 'Poppins', sans-serif; font-size:30px; text-align:center;">{{$user->name}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-xl-6">
+                                <div class="card">
+                                    <div class="card-header bg-primary">
+                                        <h5 class="text-white" style="text-align: center">User's Email</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="mb-0" style="font-family: 'Poppins', sans-serif; font-size:30px; text-align:center;">{{$user->email}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-xl-6">
+                                <div class="card">
+                                    <div class="card-header bg-primary">
+                                        <h5 class="text-white" style="text-align: center">User's Telephone</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="mb-0" style="font-family: 'Poppins', sans-serif; font-size:30px; text-align:center;">{{$user->telephone}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-xl-6">
+                                <div class="card">
+                                    <div class="card-header bg-primary">
+                                        <h5 class="text-white" style="text-align: center">User's Address</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="mb-0" style="font-family: 'Poppins', sans-serif; font-size:30px; text-align:center;">{{$user->address}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- user profile first-style end-->
                         </div>
                     </div>
                 </div>
@@ -240,6 +256,12 @@
     <script src="../../userAssets/assets/js/config.js"></script>
     <!-- Plugins JS start-->
     <script src="../../userAssets/assets/js/sidebar-menu.js"></script>
+    <script src="../../userAssets/assets/js/counter/jquery.waypoints.min.js"></script>
+    <script src="../../userAssets/assets/js/counter/jquery.counterup.min.js"></script>
+    <script src="../../userAssets/assets/js/counter/counter-custom.js"></script>
+    <script src="../../userAssets/assets/js/photoswipe/photoswipe.min.js"></script>
+    <script src="../../userAssets/assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
+    <script src="../../userAssets/assets/js/photoswipe/photoswipe.js"></script>
     <script src="../../userAssets/assets/js/tooltip-init.js"></script>
     <!-- Plugins JS Ends-->
     <!-- Theme js-->

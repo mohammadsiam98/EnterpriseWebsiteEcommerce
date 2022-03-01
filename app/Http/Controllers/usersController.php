@@ -9,6 +9,10 @@ use DB;
 
 class usersController extends Controller
 {
+    public function show()
+    {
+        return view('pages.theme.userProfile')->with('user',auth()->user());
+    }
 
     public function edit()
     {
