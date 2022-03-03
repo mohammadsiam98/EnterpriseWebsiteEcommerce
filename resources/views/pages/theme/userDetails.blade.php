@@ -104,7 +104,6 @@
                     </div>
                     <div class="logo-icon-wrapper"><a href="{{route('dashboard')}}"><img class="img-fluid" src="../../userAssets/assets/images/logo/logo-icon.png" alt=""></a></div>
 
-
                     {{-- navbar Start --}}
                     <nav class="sidebar-main">
                         <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
@@ -126,10 +125,20 @@
                                     <label class="badge badge-danger">Profile</label><a class="sidebar-link sidebar-title"><i data-feather="box"></i><span>Edit Account</span></a>
                                     <ul class="sidebar-submenu">
                                         <li><a href="{{route('user.profile')}}">Show Profile</a></li>
-                                        <li><a href="{{route('user.edit')}}" class="active">Edit Profile</a></li>
-                                        <li><a href="projectcreate.html">Add Image</a></li>
+                                        <li><a href="{{route('user.edit')}}">Edit Profile</a></li>
+
                                     </ul>
                                 </li>
+
+
+                                <li class="sidebar-list">
+                                    <label class="badge badge-danger"></label><a class="sidebar-link sidebar-title"><i data-feather="box"></i><span>Profile Image</span></a>
+                                    <ul class="sidebar-submenu">
+                                        <li><a href="{{route('usersImage.create')}}">Insert Image</a></li>
+                                        <li><a href="{{route('usersImage.list')}}">Show Image</a></li>
+                                    </ul>
+                                </li>
+
 
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="file-manager.html"><i data-feather="git-pull-request"> </i><span>Password Change</span></a></li>
 
@@ -138,7 +147,6 @@
                         <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
                     </nav>
                     {{-- navbar End --}}
-
 
                 </div>
             </div>

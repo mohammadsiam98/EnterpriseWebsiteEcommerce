@@ -25,6 +25,20 @@ Route::prefix('')->group(function(){
     #user profile update
     Route::put('/user-profile/update/', 'App\Http\Controllers\usersController@update')->name('user.update');
 
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    // User's Image Controllers 
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    Route::get('/usersImage/create', 'App\Http\Controllers\usersImageController@create')->name('usersImage.create');
+    Route::put('/usersImage/create', 'App\Http\Controllers\usersImageController@store')->name('usersImage.store');
+    Route::get('/usersImage/list', 'App\Http\Controllers\usersImageController@list')->name('usersImage.list');
+    Route::get('/usersImage/edit/{id}', 'App\Http\Controllers\usersImageController@edit')->name('usersImage.edit');
+    Route::post('/usersImage/update/{id}', 'App\Http\Controllers\usersImageController@update')->name('usersImage.update');
+    Route::DELETE('/usersImage/destroy/{id}', 'App\Http\Controllers\usersImageController@destroy')->name('usersImage.destroy');
+
+
+
 });
 
 
