@@ -15,17 +15,12 @@ class DashboardController extends Controller
         }
         elseif(Auth::user()->hasRole('superadministrator'))
         {
-            return view('dashboard');
+            return view('pages.superadministratorInterface.dashboard');
         }
         elseif(Auth::user()->hasRole('admin'))
         {
             return view('pages.theme.userdashboard');
         }
     }
-    public function userDashboard()
-    {
-        return view('pages.theme.userdashboard');
-    }
-    
    
 }
