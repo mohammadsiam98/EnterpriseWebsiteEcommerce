@@ -10,6 +10,8 @@ Route::get('/',function(){
 });
 
 
+
+
 // //auth route 
 // Route::group(['middleware' => ['auth','verified','role:user']], function() { 
 //     Route::get('/Userdashboard', 'App\Http\Controllers\DashboardController@userDashboard')->name('userDashboard');
@@ -18,6 +20,16 @@ Route::get('/',function(){
 
 Route::prefix('')->group(function(){    
     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard')->middleware('auth','verified');
+
+    // These are TermsConditions routes
+    Route::get('/Terms_Conditions', 'App\Http\Controllers\termsConditionsController@showPage')->name('termsConditions');
+    Route::get('/Terms_Conditions/create', 'App\Http\Controllers\termsConditionsController@create')->name('termsConditions.create');
+    Route::put('/Terms_Conditions/create', 'App\Http\Controllers\termsConditionsController@store')->name('termsConditions.store');
+    Route::get('/Terms_Conditions/list', 'App\Http\Controllers\termsConditionsController@list')->name('termsConditions.list');
+    Route::get('/Terms_Conditions/edit/{id}', 'App\Http\Controllers\termsConditionsController@edit')->name('termsConditions.edit');
+    Route::post('/Terms_Conditions/update/{id}', 'App\Http\Controllers\termsConditionsController@update')->name('termsConditions.update');
+    Route::delete('/Terms_Conditions/destroy/{id}', 'App\Http\Controllers\termsConditionsController@destroy')->name('termsConditions.destroy');
+
     #user profile show
     Route::get('/user-profile', 'App\Http\Controllers\usersController@show')->name('user.profile');
     #user profile edit

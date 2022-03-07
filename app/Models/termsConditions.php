@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class usersImage extends Model
+class termsConditions extends Model
 {
     use HasFactory;
-    protected $fillable = [    
-        'image'
-    ];
+    protected $fillable = [
+        'termsConditionsDetails'
+     ];
 }

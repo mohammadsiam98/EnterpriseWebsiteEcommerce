@@ -1,5 +1,7 @@
-<html class="loading" lang="en">
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,37 +9,31 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Dashboard ecommerce - Star Tech</title>
-    <link rel="apple-touch-icon" href="{{asset('admin_assets/images/ico/apple-icon-120.png')}}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('admin_assets/images/ico/favicon.ico')}}">
+    <title>DataTables - Vuexy - Bootstrap HTML admin template</title>
+    <link rel="apple-touch-icon" href="admin_assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="admin_assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/vendors.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/charts/apexcharts.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/extensions/toastr.min.css')}}">
-    <!-- END: Vendor CSS-->
-
-    <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/pickers/flatpickr/flatpickr.min.css')}}">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/bootstrap-extended.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/colors.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/components.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/themes/dark-layout.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/themes/bordered-layout.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/themes/semi-dark-layout.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/bootstrap-extended.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/colors.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/components.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/themes/dark-layout.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/themes/bordered-layout.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/themes/semi-dark-layout.css')}}">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/core/menu/menu-types/vertical-menu.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/pages/dashboard-ecommerce.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/plugins/charts/chart-apex.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/plugins/extensions/ext-component-toastr.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/core/menu/menu-types/vertical-menu.css')}}">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -48,6 +44,7 @@
 <!-- END: Head-->
 
 <!-- BEGIN: Body-->
+
 <body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
 
     <!-- BEGIN: Header-->
@@ -376,7 +373,7 @@
         <div class="shadow-bottom"></div>
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class="nav-item active"><a class="d-flex align-items-center" href="{{route('dashboard')}}"><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Dashboard</span></a>
+                <li class="nav-item"><a class="d-flex align-items-center" href="{{route('dashboard')}}"><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboard">Dashboard</span></a>
                     <ul class="menu-content">
                         <li class=""><a class="d-flex align-items-center" href="{{route('dashboard')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Super User Dashboard</span></a>
                         </li>
@@ -388,7 +385,7 @@
                     <ul class="menu-content">
                         <li class=""><a class="d-flex align-items-center" href="{{route('termsConditions.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
                         </li>
-                        <li class=""><a class="d-flex align-items-center" href="{{route('termsConditions.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
+                        <li class="nav-item active"><a class="d-flex align-items-center" href="{{route('termsConditions.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
                         </li>
                     </ul>
                 </li>
@@ -399,138 +396,92 @@
     <!-- END: Main Menu-->
 
 
-    @yield('content')
-
-
-
-
-    <!-- BEGIN: Customizer-->
-    <div class="customizer d-none d-md-block"><a class="customizer-toggle d-flex align-items-center justify-content-center" href="#"><i class="spinner" data-feather="settings"></i></a>
-        <div class="customizer-content">
-            <!-- Customizer header -->
-            <div class="customizer-header px-2 pt-1 pb-0 position-relative">
-                <h4 class="mb-0">Theme Customizer</h4>
-                <p class="m-0">Customize & Preview in Real Time</p>
-
-                <a class="customizer-close" href="#"><i data-feather="x"></i></a>
-            </div>
-
-            <hr />
-
-            <!-- Styling & Text Direction -->
-            <div class="customizer-styling-direction px-2">
-                <p class="fw-bold">Skin</p>
-                <div class="d-flex">
-                    <div class="form-check me-1">
-                        <input type="radio" id="skinlight" name="skinradio" class="form-check-input layout-name" checked data-layout="" />
-                        <label class="form-check-label" for="skinlight">Light</label>
+    <!-- BEGIN: Content-->
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-start mb-0">DataTables</h2>
+                            <div class="breadcrumb-wrapper">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="#">Datatable</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Basic
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-check me-1">
-                        <input type="radio" id="skinbordered" name="skinradio" class="form-check-input layout-name" data-layout="bordered-layout" />
-                        <label class="form-check-label" for="skinbordered">Bordered</label>
-                    </div>
-                    <div class="form-check me-1">
-                        <input type="radio" id="skindark" name="skinradio" class="form-check-input layout-name" data-layout="dark-layout" />
-                        <label class="form-check-label" for="skindark">Dark</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" id="skinsemidark" name="skinradio" class="form-check-input layout-name" data-layout="semi-dark-layout" />
-                        <label class="form-check-label" for="skinsemidark">Semi Dark</label>
+                </div>
+                <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
+                    <div class="mb-1 breadcrumb-right">
+                        <div class="dropdown">
+                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="grid"></i></button>
+                            <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="app-todo.html"><i class="me-1" data-feather="check-square"></i><span class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><i class="me-1" data-feather="message-square"></i><span class="align-middle">Chat</span></a><a class="dropdown-item" href="app-email.html"><i class="me-1" data-feather="mail"></i><span class="align-middle">Email</span></a><a class="dropdown-item" href="app-calendar.html"><i class="me-1" data-feather="calendar"></i><span class="align-middle">Calendar</span></a></div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <hr />
-
-            <!-- Menu -->
-            <div class="customizer-menu px-2">
-                <div id="customizer-menu-collapsible" class="d-flex">
-                    <p class="fw-bold me-auto m-0">Menu Collapsed</p>
-                    <div class="form-check form-check-primary form-switch">
-                        <input type="checkbox" class="form-check-input" id="collapse-sidebar-switch" />
-                        <label class="form-check-label" for="collapse-sidebar-switch"></label>
+            <div class="content-body">
+                <div class="row">
+                    <div class="col-12">
+                        <p>Read full documnetation <a href="https://datatables.net/" target="_blank">here</a></p>
                     </div>
                 </div>
-            </div>
-            <hr />
+                <!-- Basic table -->
+                <section id="basic-datatable">
+                    <!-- Basic Tables start -->
+                    <div class="row" id="basic-table">
+                        <div class="col-12">
+                            <div class="card">
 
-            <!-- Layout Width -->
-            <div class="customizer-footer px-2">
-                <p class="fw-bold">Layout Width</p>
-                <div class="d-flex">
-                    <div class="form-check me-1">
-                        <input type="radio" id="layout-width-full" name="layoutWidth" class="form-check-input" checked />
-                        <label class="form-check-label" for="layout-width-full">Full Width</label>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>termsConditions</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($TermsConditions as $terms)
+                                            <tr>
+                                                <td>
+                                                    {!!\Illuminate\Support\Str::limit($terms->termsConditionsDetails,$limit=20,$end='.')!!}
+                                                </td>
+                                                <td>
+                                                    <div class="demo-inline-spacing">
+                                                        <a href="{{route('termsConditions.edit' , $terms->id)}}"><button type="button" class="btn btn-relief-primary">Edit</button></a>
+                                                        <form action="{{route('termsConditions.destroy', $terms->id)}}" method="POST">
+                                                            @csrf
+                                                            @method('Delete')
+                                                            <input type="submit" name="submit" value="Delete" class="btn btn-danger m-2">
+                                                        </form>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-check me-1">
-                        <input type="radio" id="layout-width-boxed" name="layoutWidth" class="form-check-input" />
-                        <label class="form-check-label" for="layout-width-boxed">Boxed</label>
-                    </div>
-                </div>
-            </div>
-            <hr />
+                    <!-- Basic Tables end -->
 
-            <!-- Navbar -->
-            <div class="customizer-navbar px-2">
-                <div id="customizer-navbar-colors">
-                    <p class="fw-bold">Navbar Color</p>
-                    <ul class="list-inline unstyled-list">
-                        <li class="color-box bg-white border selected" data-navbar-default=""></li>
-                        <li class="color-box bg-primary" data-navbar-color="bg-primary"></li>
-                        <li class="color-box bg-secondary" data-navbar-color="bg-secondary"></li>
-                        <li class="color-box bg-success" data-navbar-color="bg-success"></li>
-                        <li class="color-box bg-danger" data-navbar-color="bg-danger"></li>
-                        <li class="color-box bg-info" data-navbar-color="bg-info"></li>
-                        <li class="color-box bg-warning" data-navbar-color="bg-warning"></li>
-                        <li class="color-box bg-dark" data-navbar-color="bg-dark"></li>
-                    </ul>
-                </div>
+                </section>
+                <!--/ Basic table -->
 
-                <p class="navbar-type-text fw-bold">Navbar Type</p>
-                <div class="d-flex">
-                    <div class="form-check me-1">
-                        <input type="radio" id="nav-type-floating" name="navType" class="form-check-input" checked />
-                        <label class="form-check-label" for="nav-type-floating">Floating</label>
-                    </div>
-                    <div class="form-check me-1">
-                        <input type="radio" id="nav-type-sticky" name="navType" class="form-check-input" />
-                        <label class="form-check-label" for="nav-type-sticky">Sticky</label>
-                    </div>
-                    <div class="form-check me-1">
-                        <input type="radio" id="nav-type-static" name="navType" class="form-check-input" />
-                        <label class="form-check-label" for="nav-type-static">Static</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" id="nav-type-hidden" name="navType" class="form-check-input" />
-                        <label class="form-check-label" for="nav-type-hidden">Hidden</label>
-                    </div>
-                </div>
-            </div>
-            <hr />
-
-            <!-- Footer -->
-            <div class="customizer-footer px-2">
-                <p class="fw-bold">Footer Type</p>
-                <div class="d-flex">
-                    <div class="form-check me-1">
-                        <input type="radio" id="footer-type-sticky" name="footerType" class="form-check-input" />
-                        <label class="form-check-label" for="footer-type-sticky">Sticky</label>
-                    </div>
-                    <div class="form-check me-1">
-                        <input type="radio" id="footer-type-static" name="footerType" class="form-check-input" checked />
-                        <label class="form-check-label" for="footer-type-static">Static</label>
-                    </div>
-                    <div class="form-check me-1">
-                        <input type="radio" id="footer-type-hidden" name="footerType" class="form-check-input" />
-                        <label class="form-check-label" for="footer-type-hidden">Hidden</label>
-                    </div>
-                </div>
             </div>
         </div>
-
     </div>
-    <!-- End: Customizer-->
-
+    <!-- END: Content-->
 
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
@@ -544,33 +495,33 @@
 
 
     <!-- BEGIN: Vendor JS-->
-    <script src="{{asset('admin_assets/vendors/js/vendors.min.js')}}"></script>
+    <script src="../admin_assets/vendors/js/vendors.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
     <script src="{{asset('admin_assets/vendors/js/tables/datatable/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('admin_assets/app-assets/vendors/js/forms/validation/jquery.validate.min.js')}}"></script>
-    <!-- END: Page Vendor JS-->
-
-
-    <!-- BEGIN: Page Vendor JS-->
-    <script src="{{asset('admin_assets/vendors/js/charts/apexcharts.min.js')}}"></script>
-
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/responsive.bootstrap5.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/datatables.checkboxes.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/datatables.buttons.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/jszip.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/pdfmake.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/vfs_fonts.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/buttons.print.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/pickers/flatpickr/flatpickr.min.js')}}"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
-    <script src="{{asset('admin_assets/js/core/app-menu.min.js')}}"></script>
-    <script src="{{asset('admin_assets/js/core/app.min.js')}}"></script>
-    <script src="{{asset('admin_assets/js/scripts/customizer.min.js')}}"></script>
-    <script src="{{asset('admin_assets/js/scripts/pages/modal-add-permission.js')}}"></script>
-    <script src="{{asset('admin_assets/js/scripts/pages/modal-edit-permission.js')}}"></script>
-    <script src="{{asset('admin_assets/js/scripts/pages/app-access-permission.js')}}"></script>
+    <script src="{{asset('admin_assets/js/core/app-menu.js')}}"></script>
+    <script src="{{asset('admin_assets/js/core/app.js')}}"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="{{asset('admin_assets/js/scripts/pages/dashboard-ecommerce.min.js')}}"></script>
+    <script src="{{asset('admin_assets/js/scripts/tables/table-datatables-basic.js')}}"></script>
     <!-- END: Page JS-->
-
 
     <script>
         $(window).on('load', function() {
@@ -585,4 +536,5 @@
     </script>
 </body>
 <!-- END: Body-->
+
 </html>
