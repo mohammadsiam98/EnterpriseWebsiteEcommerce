@@ -393,6 +393,15 @@
                     </ul>
                 </li>
 
+                <li class="nav-item"><a class="d-flex align-items-center" href=""><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Privacy Policy</span></a>
+                    <ul class="menu-content">
+                        <li class="nav-item"><a class="d-flex align-items-center" href="{{route('privacyPolicy.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
+                        </li>
+                        <li class=""><a class="d-flex align-items-center" href="{{route('privacyPolicy.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
         </div>
     </div>

@@ -383,9 +383,9 @@
                 </li>
                 <li class="nav-item"><a class="d-flex align-items-center" href=""><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Terms&Conditions</span></a>
                     <ul class="menu-content">
-                        <li class=""><a class="d-flex align-items-center" href="{{route('termsConditions.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
+                        <li class="nav-item"><a class="d-flex align-items-center" href="{{route('termsConditions.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
                         </li>
-                        <li class="nav-item active"><a class="d-flex align-items-center" href="{{route('termsConditions.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
+                        <li class=""><a class="d-flex align-items-center" href="{{route('termsConditions.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
                         </li>
                     </ul>
                 </li>
@@ -393,7 +393,7 @@
                     <ul class="menu-content">
                         <li class="nav-item"><a class="d-flex align-items-center" href="{{route('privacyPolicy.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
                         </li>
-                        <li class=""><a class="d-flex align-items-center" href="{{route('privacyPolicy.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
+                        <li class="nav-item active"><a class="d-flex align-items-center" href="{{route('privacyPolicy.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
                         </li>
                     </ul>
                 </li>
@@ -448,20 +448,20 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>termsConditions</th>
+                                                <th>Privacy Policies</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($TermsConditions as $terms)
+                                            @foreach ($privacyDetails as $privacy)
                                             <tr>
                                                 <td>
-                                                    {!!\Illuminate\Support\Str::limit($terms->termsConditionsDetails,$limit=20,$end='.')!!}
+                                                    {!!\Illuminate\Support\Str::limit($privacy->privacyPolicies,$limit=20,$end='.')!!}
                                                 </td>
                                                 <td>
                                                     <div class="demo-inline-spacing">
-                                                        <a href="{{route('termsConditions.edit' , $terms->id)}}"><button type="button" class="btn btn-relief-primary">Edit</button></a>
-                                                        <form action="{{route('termsConditions.destroy', $terms->id)}}" method="POST">
+                                                        <a href="{{route('privacyPolicy.edit' , $privacy->id)}}"><button type="button" class="btn btn-relief-primary">Edit</button></a>
+                                                        <form action="{{route('privacyPolicy.destroy', $privacy->id)}}" method="POST">
                                                             @csrf
                                                             @method('Delete')
                                                             <input type="submit" name="submit" value="Delete" class="btn btn-danger m-2">

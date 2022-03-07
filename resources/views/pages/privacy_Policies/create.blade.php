@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,36 +8,49 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>DataTables - Vuexy - Bootstrap HTML admin template</title>
-    <link rel="apple-touch-icon" href="admin_assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="admin_assets/images/ico/favicon.ico">
+    <title>Dashboard ecommerce - Star Tech</title>
+    <link rel="apple-touch-icon" href="{{asset('admin_assets/images/ico/apple-icon-120.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('admin_assets/images/ico/favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/vendors.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/charts/apexcharts.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/extensions/toastr.min.css')}}">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/pickers/flatpickr/flatpickr.min.css')}}">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/bootstrap.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/bootstrap-extended.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/colors.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/components.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/themes/dark-layout.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/themes/bordered-layout.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/themes/semi-dark-layout.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/bootstrap-extended.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/colors.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/components.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/themes/dark-layout.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/themes/bordered-layout.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/themes/semi-dark-layout.min.css')}}">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/core/menu/menu-types/vertical-menu.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/core/menu/menu-types/vertical-menu.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/pages/dashboard-ecommerce.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/plugins/charts/chart-apex.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/plugins/extensions/ext-component-toastr.min.css')}}">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/assets/css/style.css')}}">
     <!-- END: Custom CSS-->
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+    </style>
+
+
 
 </head>
 <!-- END: Head-->
@@ -46,6 +58,7 @@
 <!-- BEGIN: Body-->
 
 <body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
+
 
     <!-- BEGIN: Header-->
     <nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow container-xxl">
@@ -383,15 +396,15 @@
                 </li>
                 <li class="nav-item"><a class="d-flex align-items-center" href=""><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Terms&Conditions</span></a>
                     <ul class="menu-content">
-                        <li class=""><a class="d-flex align-items-center" href="{{route('termsConditions.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
+                        <li class="nav-item"><a class="d-flex align-items-center" href="{{route('termsConditions.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
                         </li>
-                        <li class="nav-item active"><a class="d-flex align-items-center" href="{{route('termsConditions.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
+                        <li class=""><a class="d-flex align-items-center" href="{{route('termsConditions.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item"><a class="d-flex align-items-center" href=""><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Privacy Policy</span></a>
                     <ul class="menu-content">
-                        <li class="nav-item"><a class="d-flex align-items-center" href="{{route('privacyPolicy.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
+                        <li class="nav-item active"><a class="d-flex align-items-center" href="{{route('privacyPolicy.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
                         </li>
                         <li class=""><a class="d-flex align-items-center" href="{{route('privacyPolicy.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
                         </li>
@@ -403,84 +416,58 @@
     </div>
     <!-- END: Main Menu-->
 
-
     <!-- BEGIN: Content-->
     <div class="app-content content ">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper container-xxl p-0">
-            <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h2 class="content-header-title float-start mb-0">DataTables</h2>
-                            <div class="breadcrumb-wrapper">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item"><a href="#">Datatable</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">Basic
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
-                    <div class="mb-1 breadcrumb-right">
-                        <div class="dropdown">
-                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="grid"></i></button>
-                            <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="app-todo.html"><i class="me-1" data-feather="check-square"></i><span class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><i class="me-1" data-feather="message-square"></i><span class="align-middle">Chat</span></a><a class="dropdown-item" href="app-email.html"><i class="me-1" data-feather="mail"></i><span class="align-middle">Email</span></a><a class="dropdown-item" href="app-calendar.html"><i class="me-1" data-feather="calendar"></i><span class="align-middle">Calendar</span></a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="content-body">
-                <!-- Basic table -->
-                <section id="basic-datatable">
-                    <!-- Basic Tables start -->
-                    <div class="row" id="basic-table">
-                        <div class="col-12">
+                <!-- Basic Horizontal form layout section start -->
+                <section id="basic-horizontal-layouts">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
                             <div class="card">
-
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>termsConditions</th>
-                                                <th>Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach ($TermsConditions as $terms)
-                                            <tr>
-                                                <td>
-                                                    {!!\Illuminate\Support\Str::limit($terms->termsConditionsDetails,$limit=20,$end='.')!!}
-                                                </td>
-                                                <td>
-                                                    <div class="demo-inline-spacing">
-                                                        <a href="{{route('termsConditions.edit' , $terms->id)}}"><button type="button" class="btn btn-relief-primary">Edit</button></a>
-                                                        <form action="{{route('termsConditions.destroy', $terms->id)}}" method="POST">
-                                                            @csrf
-                                                            @method('Delete')
-                                                            <input type="submit" name="submit" value="Delete" class="btn btn-danger m-2">
-                                                        </form>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
+                                <div class="card-header">
+                                    <h4 class="card-title" style="text-align: center;">Privacy & Policies</h4>
                                 </div>
+                                @if($privacyDetails==null)
+                                <div class="card-body">
+                                    <form class="form form-horizontal" action="{{route('privacyPolicy.store')}}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('PUT')
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mb-1 row">
+                                                    <div class="col-sm-12">
+                                                        <textarea id="my-editor" name="privacyPolicies" class="form-control" style="font-size:24px;"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12">
+                                                <button type="submit" class="btn btn-lg btn-primary me-1">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                @else
+                                <!-- Block Badges start -->
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <span class="badge d-block bg-primary">
+                                                <span style="font-size: 25px; text-align:center">You have already inserted terms & conditions.Now you can only edit them</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Block Badges end -->
+                                @endif
                             </div>
                         </div>
                     </div>
-                    <!-- Basic Tables end -->
-
                 </section>
-                <!--/ Basic table -->
-
+                <!-- Basic Horizontal form layout section end -->
             </div>
         </div>
     </div>
@@ -498,32 +485,19 @@
 
 
     <!-- BEGIN: Vendor JS-->
-    <script src="../admin_assets/vendors/js/vendors.min.js"></script>
+    <script src="{{asset('admin_assets/vendors/js/vendors.min.js')}}"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="{{asset('admin_assets/vendors/js/tables/datatable/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('admin_assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js')}}"></script>
-    <script src="{{asset('admin_assets/vendors/js/tables/datatable/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('admin_assets/vendors/js/tables/datatable/responsive.bootstrap5.min.js')}}"></script>
-    <script src="{{asset('admin_assets/vendors/js/tables/datatable/datatables.checkboxes.min.js')}}"></script>
-    <script src="{{asset('admin_assets/vendors/js/tables/datatable/datatables.buttons.min.js')}}"></script>
-    <script src="{{asset('admin_assets/vendors/js/tables/datatable/jszip.min.js')}}"></script>
-    <script src="{{asset('admin_assets/vendors/js/tables/datatable/pdfmake.min.js')}}"></script>
-    <script src="{{asset('admin_assets/vendors/js/tables/datatable/vfs_fonts.js')}}"></script>
-    <script src="{{asset('admin_assets/vendors/js/tables/datatable/buttons.html5.min.js')}}"></script>
-    <script src="{{asset('admin_assets/vendors/js/tables/datatable/buttons.print.min.js')}}"></script>
-    <script src="{{asset('admin_assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js')}}"></script>
-    <script src="{{asset('admin_assets/vendors/js/pickers/flatpickr/flatpickr.min.js')}}"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
     <script src="{{asset('admin_assets/js/core/app-menu.js')}}"></script>
-    <script src="{{asset('admin_assets/js/core/app.js')}}"></script>
+    <script src="{{asset('admin_assets//js/core/app.js')}}"></script>
+    <script src="//cdn.ckeditor.com/4.6.2/full-all/ckeditor.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="{{asset('admin_assets/js/scripts/tables/table-datatables-basic.js')}}"></script>
     <!-- END: Page JS-->
 
     <script>
@@ -537,7 +511,18 @@
         })
 
     </script>
+    <script>
+        var options = {
+            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images'
+            , filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token='
+            , filebrowserBrowseUrl: '/laravel-filemanager?type=Files'
+            , filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+        };
+
+        CKEDITOR.replace('my-editor', options);
+
+    </script>
+
 </body>
-<!-- END: Body-->
 
 </html>

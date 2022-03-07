@@ -1729,7 +1729,7 @@
                                     <li><a class="list-group-item list-group-item-action" href="../shop/my-account.html">My Account</a></li>
                                     <li><a class="list-group-item list-group-item-action" href="../shop/track-your-order.html">Order Tracking</a></li>
                                     <li><a class="list-group-item list-group-item-action" href="../shop/wishlist.html">Wish List</a></li>
-                                    <li><a class="list-group-item list-group-item-action" href="../home/terms-and-conditions.html">Customer Service</a></li>
+                                    <li><a class="list-group-item list-group-item-action" href="{{route('termsConditions')}}">Terms & Conditions</a></li>
                                     <li><a class="list-group-item list-group-item-action" href="../home/terms-and-conditions.html">Returns / Exchange</a></li>
                                     <li><a class="list-group-item list-group-item-action" href="../home/faq.html">FAQs</a></li>
                                     <li><a class="list-group-item list-group-item-action" href="../home/terms-and-conditions.html">Product Support</a></li>

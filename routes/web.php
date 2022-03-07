@@ -30,6 +30,16 @@ Route::prefix('')->group(function(){
     Route::post('/Terms_Conditions/update/{id}', 'App\Http\Controllers\termsConditionsController@update')->name('termsConditions.update');
     Route::delete('/Terms_Conditions/destroy/{id}', 'App\Http\Controllers\termsConditionsController@destroy')->name('termsConditions.destroy');
 
+
+    // These are TermsConditions routes
+    Route::get('/Privacy-Policy', 'App\Http\Controllers\privacyPolicyController@showPage')->name('privacyPolicy');
+    Route::get('/Privacy-Policy/create', 'App\Http\Controllers\privacyPolicyController@create')->name('privacyPolicy.create');
+    Route::put('/Privacy-Policy/create', 'App\Http\Controllers\privacyPolicyController@store')->name('privacyPolicy.store');
+    Route::get('/Privacy-Policy/list', 'App\Http\Controllers\privacyPolicyController@list')->name('privacyPolicy.list');
+    Route::get('/Privacy-Policy/edit/{id}', 'App\Http\Controllers\privacyPolicyController@edit')->name('privacyPolicy.edit');
+    Route::post('/Privacy-Policy/update/{id}', 'App\Http\Controllers\privacyPolicyController@update')->name('privacyPolicy.update');
+    Route::delete('/Privacy-Policy/destroy/{id}', 'App\Http\Controllers\privacyPolicyController@destroy')->name('privacyPolicy.destroy');
+
     #user profile show
     Route::get('/user-profile', 'App\Http\Controllers\usersController@show')->name('user.profile');
     #user profile edit

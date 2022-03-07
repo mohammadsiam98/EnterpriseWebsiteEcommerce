@@ -9,6 +9,11 @@ use Illuminate\Support\Str;
 
 class termsConditionsController extends Controller
 {
+    public function showPage()
+    {
+        $TermsConditions = termsConditions::all();
+        return view ('pages.terms_Conditions.termsConditions',compact('TermsConditions'));
+    }
 
     public function list()
     {
