@@ -17,18 +17,21 @@ Route::get('/',function(){
 //     Route::get('/Userdashboard', 'App\Http\Controllers\DashboardController@userDashboard')->name('userDashboard');
 // });
 
+// These are Terms & Conditions routes
+Route::get('/terms_Conditions', 'App\Http\Controllers\termsConditionsController@showPage')->name('termsConditions');
+
 // These are Contact routes
 Route::get('/contact', 'App\Http\Controllers\ContactPagesController@showPage')->name('contact');
 Route::post('/contact/create', 'App\Http\Controllers\ContactPagesController@store')->name('contact.store');
-Route::get('/contact/list', 'App\Http\Controllers\ContactPagesController@list')->name('contact.list');
-Route::delete('/contact/destroy/{id}', 'App\Http\Controllers\ContactPagesController@destroy')->name('contact.destroy');
 
-
-Route::prefix('')->group(function(){    
-    Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard')->middleware('auth','verified');
+##################################################################################################################################
+                                                       # For super administrator
+##################################################################################################################################
+Route::group(['middleware'=>['auth','role:superadministrator']],function(){    
+    Route::get('dashboard', 'App\Http\Controllers\DashboardController@index')->name('admin.dashboard');
+    Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
 
     // These are TermsConditions routes
-    Route::get('/Terms_Conditions', 'App\Http\Controllers\termsConditionsController@showPage')->name('termsConditions');
     Route::get('/Terms_Conditions/create', 'App\Http\Controllers\termsConditionsController@create')->name('termsConditions.create');
     Route::put('/Terms_Conditions/create', 'App\Http\Controllers\termsConditionsController@store')->name('termsConditions.store');
     Route::get('/Terms_Conditions/list', 'App\Http\Controllers\termsConditionsController@list')->name('termsConditions.list');
@@ -46,28 +49,41 @@ Route::prefix('')->group(function(){
     Route::post('/Privacy-Policy/update/{id}', 'App\Http\Controllers\privacyPolicyController@update')->name('privacyPolicy.update');
     Route::delete('/Privacy-Policy/destroy/{id}', 'App\Http\Controllers\privacyPolicyController@destroy')->name('privacyPolicy.destroy');
 
-    #user profile show
-    Route::get('/user-profile', 'App\Http\Controllers\usersController@show')->name('user.profile');
-    #user profile edit
-    Route::get('/user-profile/edit', 'App\Http\Controllers\usersController@edit')->name('user.edit');
-    #user profile update
-    Route::put('/user-profile/update/', 'App\Http\Controllers\usersController@update')->name('user.update');
-
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////
-                                    // User's Image Controllers 
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-
-    Route::get('/usersImage/create', 'App\Http\Controllers\usersImageController@create')->name('usersImage.create');
-    Route::put('/usersImage/create', 'App\Http\Controllers\usersImageController@store')->name('usersImage.store');
-    Route::get('/usersImage/list', 'App\Http\Controllers\usersImageController@list')->name('usersImage.list');
-    Route::get('/usersImage/edit/{id}', 'App\Http\Controllers\usersImageController@edit')->name('usersImage.edit');
-    Route::post('/usersImage/update/{id}', 'App\Http\Controllers\usersImageController@update')->name('usersImage.update');
-    Route::DELETE('/usersImage/destroy/{id}', 'App\Http\Controllers\usersImageController@destroy')->name('usersImage.destroy');
+    Route::get('/contact/list', 'App\Http\Controllers\ContactPagesController@list')->name('contact.list');
+    Route::delete('/contact/destroy/{id}', 'App\Http\Controllers\ContactPagesController@destroy')->name('contact.destroy');
 
 
 
 });
+
+
+##################################################################################################################################
+                                                       # For User
+##################################################################################################################################
+Route::group(['middleware' => ['auth']], function(){    
+     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard')->middleware('auth','verified');
+     Route::get('/logout', 'App\Http\Controllers\LogoutController@perform')->name('logout.perform');
+     #user profile show
+     Route::get('/user-profile', 'App\Http\Controllers\usersController@show')->name('user.profile')->middleware('auth','verified');
+     #user profile edit
+     Route::get('/user-profile/edit', 'App\Http\Controllers\usersController@edit')->name('user.edit')->middleware('auth','verified');
+     #user profile update
+     Route::put('/user-profile/update/', 'App\Http\Controllers\usersController@update')->name('user.update')->middleware('auth','verified');
+ 
+ 
+     /////////////////////////////////////////////////////////////////////////////////////////////////
+                                     // User's Image Controllers 
+     ////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+     Route::get('/usersImage/create', 'App\Http\Controllers\usersImageController@create')->name('usersImage.create')->middleware('auth','verified');
+     Route::put('/usersImage/create', 'App\Http\Controllers\usersImageController@store')->name('usersImage.store')->middleware('auth','verified');
+     Route::get('/usersImage/list', 'App\Http\Controllers\usersImageController@list')->name('usersImage.list')->middleware('auth','verified');
+     Route::get('/usersImage/edit/{id}', 'App\Http\Controllers\usersImageController@edit')->name('usersImage.edit')->middleware('auth','verified');
+     Route::post('/usersImage/update/{id}', 'App\Http\Controllers\usersImageController@update')->name('usersImage.update')->middleware('auth','verified');
+     Route::DELETE('/usersImage/destroy/{id}', 'App\Http\Controllers\usersImageController@destroy')->name('usersImage.destroy')->middleware('auth','verified');
+ 
+});
+
 
 
 Route::get('login-with-github', 'App\Http\Controllers\SocialPagesController@loginWithGithub')->name('loginWithGithub');
