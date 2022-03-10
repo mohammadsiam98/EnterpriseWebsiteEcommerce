@@ -1,6 +1,9 @@
 @extends('layouts.website_main_layout')
 @section('StarTech', 'Contact Form')
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
+</style>
 
 @section('content')
 
@@ -31,31 +34,23 @@
             <div class="col-md-8 col-xl-9">
                 <div class="mr-xl-6">
                     <div class="border-bottom border-color-1 mb-5">
-                        <h3 class="section-title mb-0 pb-2 font-size-25">Leave us a Message</h3>
+                        <h3 class="section-title mb-0 pb-2 font-size-25" style="font-family: 'Poppins', sans-serif; font-size:25px; font-weight:bold">Leave us a Message</h3>
                     </div>
-                    <p class="max-width-830-xl text-gray-90">Maecenas dolor elit, semper a sem sed, pulvinar molestie lacus. Aliquam dignissim, elit non mattis ultrices, neque odio ultricies tellus, eu porttitor nisl ipsum eu massa.</p>
-                    <form class="js-validate" novalidate="novalidate">
+                    <p class="max-width-830-xl text-gray-90" style="font-family: 'Poppins', sans-serif;">Maecenas dolor elit, semper a sem sed, pulvinar molestie lacus. Aliquam dignissim, elit non mattis ultrices, neque odio ultricies tellus, eu porttitor nisl ipsum eu massa.</p>
+                    <form class="js-validate" novalidate="novalidate" id="contact_form" action="{{route('contact.store')}}" method="POST">
+                        @csrf
+                        <div class="column col-md-12">
+                            @include('alert.messages')
+                        </div>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <!-- Input -->
                                 <div class="js-form-message mb-4">
                                     <label class="form-label">
-                                        First name
+                                        Name
                                         <span class="text-danger">*</span>
                                     </label>
-                                    <input type="text" class="form-control" name="firstName" placeholder="" aria-label="" required="" data-msg="Please enter your frist name." data-error-class="u-has-error" data-success-class="u-has-success" autocomplete="off">
-                                </div>
-                                <!-- End Input -->
-                            </div>
-
-                            <div class="col-md-6">
-                                <!-- Input -->
-                                <div class="js-form-message mb-4">
-                                    <label class="form-label">
-                                        Last name
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                    <input type="text" class="form-control" name="lastName" placeholder="" aria-label="" required="" data-msg="Please enter your last name." data-error-class="u-has-error" data-success-class="u-has-success">
+                                    <input type="text" class="form-control" name="name" placeholder="" aria-label="" required="" style="font-family: 'Poppins', sans-serif; font-size:25px; font-weight:bold" data-msg="Please enter your first name." data-error-class="u-has-error" data-success-class="u-has-success" autocomplete="off">
                                 </div>
                                 <!-- End Input -->
                             </div>
@@ -65,8 +60,9 @@
                                 <div class="js-form-message mb-4">
                                     <label class="form-label">
                                         Subject
+                                        <span class="text-danger">*</span>
                                     </label>
-                                    <input type="text" class="form-control" name="Subject" placeholder="" aria-label="" data-msg="Please enter subject." data-error-class="u-has-error" data-success-class="u-has-success">
+                                    <input type="text" class="form-control" name="subject" placeholder="" aria-label="" required="" style="font-family: 'Poppins', sans-serif; font-size:25px; font-weight:bold" data-msg="Please enter subject." data-error-class="u-has-error" data-success-class="u-has-success" autocomplete="off">
                                 </div>
                                 <!-- End Input -->
                             </div>
@@ -77,7 +73,7 @@
                                     </label>
 
                                     <div class="input-group">
-                                        <textarea class="form-control p-5" rows="4" name="text" placeholder=""></textarea>
+                                        <textarea class="form-control p-5" style="font-family: 'Poppins', sans-serif; font-size:25px; font-weight:bold" rows="4" name="message" placeholder="" required=""></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -169,5 +165,5 @@
     </div>
 </main>
 <!-- ========== END MAIN CONTENT ========== -->
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @endsection

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Livewire\contactform;
 
 // This is main Home page Route Url Start
 
@@ -16,6 +16,12 @@ Route::get('/',function(){
 // Route::group(['middleware' => ['auth','verified','role:user']], function() { 
 //     Route::get('/Userdashboard', 'App\Http\Controllers\DashboardController@userDashboard')->name('userDashboard');
 // });
+
+// These are Contact routes
+Route::get('/contact', 'App\Http\Controllers\ContactPagesController@showPage')->name('contact');
+Route::post('/contact/create', 'App\Http\Controllers\ContactPagesController@store')->name('contact.store');
+Route::get('/contact/list', 'App\Http\Controllers\ContactPagesController@list')->name('contact.list');
+Route::delete('/contact/destroy/{id}', 'App\Http\Controllers\ContactPagesController@destroy')->name('contact.destroy');
 
 
 Route::prefix('')->group(function(){    
