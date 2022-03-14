@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\usersImage;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Auth;
@@ -12,14 +12,18 @@ class usersController extends Controller
     # User's Profile Show
     public function show()
     {
-        return view('pages.theme.userProfile')->with('user',auth()->user());
+        $users_id = Auth::id();
+        $usersImage = usersImage::where('user_id', $users_id)->first();
+        return view('pages.theme.userProfile',compact('usersImage'))->with('user',auth()->user());
     }
 
     # User's Profile Edit
     public function edit()
     {
         //
-        return view('pages.theme.userDetails')->with('user',auth()->user());
+        $users_id = Auth::id();
+        $usersImage = usersImage::where('user_id', $users_id)->first();
+        return view('pages.theme.userDetails',compact('usersImage'))->with('user',auth()->user());
     }
 
     # User's Profile Update

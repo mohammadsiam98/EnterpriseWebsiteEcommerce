@@ -70,7 +70,7 @@
 
                         <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
                         <li class="profile-nav onhover-dropdown p-0 me-0">
-                            @if($checkThatImageExistsOrNot==null)
+                            @if($usersImage==null)
                             <div class="media profile-media"><img class="b-r-10" style="width: 50px;" src="../assets/images/dashboard/profile.jpg}" alt="">
                                 <div class="media-body" style="font-family: 'Poppins', sans-serif; font-size:30px"><span style="font-family: 'Poppins', sans-serif; font-size:30px">{{ Auth::user()->name }}</span>
                                     <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
@@ -185,7 +185,6 @@
                                     <h5 style="font-family: 'Poppins', sans-serif; font-size:30px">Insert your Image</h5>
                                 </div>
                                 @if($usersImage==null)
-
                                 <form class="form theme-form" action="{{route('usersImage.store')}}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')

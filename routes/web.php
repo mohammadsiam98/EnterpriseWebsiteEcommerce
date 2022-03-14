@@ -28,7 +28,7 @@ Route::post('/contact/create', 'App\Http\Controllers\ContactPagesController@stor
                                                        # For super administrator
 ##################################################################################################################################
 Route::group(['middleware'=>['auth','role:superadministrator']],function(){    
-    Route::get('dashboard', 'App\Http\Controllers\DashboardController@index')->name('admin.dashboard');
+    Route::get('/admin/dashboard', 'App\Http\Controllers\DashboardController@index')->name('admin.dashboard');
     Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
 
     // These are TermsConditions routes

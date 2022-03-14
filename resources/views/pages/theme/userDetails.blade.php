@@ -43,6 +43,7 @@
     <!-- tap on tap ends-->
     <!-- page-wrapper Start-->
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
+
         <!-- Page Header Start-->
         <div class="page-header">
             <div class="header-wrapper row m-0">
@@ -70,11 +71,20 @@
 
                         <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
                         <li class="profile-nav onhover-dropdown p-0 me-0">
-                            <div class="media profile-media"><img class="b-r-10" style="width: 50px;" src="../../userAssets/assets/images/dashboard/profile.jpg" alt="">
+                            @if($usersImage==null)
+                            <div class="media profile-media"><img class="b-r-10" style="width: 50px;" src="../assets/images/dashboard/profile.jpg}" alt="">
                                 <div class="media-body" style="font-family: 'Poppins', sans-serif; font-size:30px"><span style="font-family: 'Poppins', sans-serif; font-size:30px">{{ Auth::user()->name }}</span>
                                     <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
                                 </div>
                             </div>
+                            @else
+                            <div class="media profile-media"><img class="b-r-10" style="width: 50px;" src="{{url($usersImage->image)}}" alt="">
+                                <div class="media-body" style="font-family: 'Poppins', sans-serif; font-size:30px"><span style="font-family: 'Poppins', sans-serif; font-size:30px">{{ Auth::user()->name }}</span>
+                                    <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
+                                </div>
+                            </div>
+                            @endif
+
                             <ul class="profile-dropdown onhover-show-div">
                                 <li><a href="#"><i data-feather="log-in"> </i><span>Log out</span></a></li>
                             </ul>
@@ -93,6 +103,9 @@
             </div>
         </div>
         <!-- Page Header Ends-->
+
+
+
         <!-- Page Body Start-->
         <div class="page-body-wrapper">
             <!-- Page Sidebar Start-->
