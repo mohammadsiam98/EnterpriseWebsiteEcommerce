@@ -3,6 +3,8 @@
 
 
 @section('content')
+
+
 <!-- ========== MAIN CONTENT ========== -->
 <main id="content" role="main">
     <!-- Slider Section -->
@@ -25,67 +27,6 @@
                             </div>
                             <div class="col-xl-7 col-12 d-flex align-items-end ml-auto ml-md-0" data-scs-animation-in="fadeInRight" data-scs-animation-delay="500">
                                 <img class="img-fluid ml-auto mr-10 mr-wd-auto" src="assets/img/banner.jpg" alt="Image Description">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="js-slide">
-                        <div class="row pt-7 py-md-0">
-                            <div class="d-none d-wd-block offset-1"></div>
-                            <div class="col-xl col col-md-6 mt-md-8 mt-lg-10">
-                                <div class="col-xl col col-md-12 mt-md-8 mt-lg-10">
-                                    <div class="ml-xl-4">
-                                        <h1 class="font-size-46 text-lh-45 font-weight-light mb-4 mt-8" data-scs-animation-in="fadeInUp" data-scs-animation-delay="200">
-                                            <strong>আকর্ষণীয় অফার চলছে</strong>
-                                        </h1>
-                                        <a href="../shop/single-product-fullwidth.html" class=" mb-4 btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16" data-scs-animation-in="fadeInUp" data-scs-animation-delay="300">
-                                            ভিজিট করুন
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-7 col-6 flex-horizontal-center ml-auto ml-md-0" data-scs-animation-in="fadeInRight" data-scs-animation-delay="500">
-                                <img class="img-fluid ml-auto mr-10 mr-wd-auto h-100" src="assets/img/bkashnagadcombinedupdated-982x500.jpg" alt="Image Description">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="js-slide">
-                        <div class="row pt-7 py-md-0">
-                            <div class="d-none d-wd-block offset-1"></div>
-                            <div class="col-xl col col-md-6 mt-md-8 mt-lg-10">
-                                <div class="col-xl col col-md-12 mt-md-8 mt-lg-10">
-                                    <div class="ml-xl-4">
-                                        <h1 class="font-size-46 text-lh-45 font-weight-light mb-4 mt-8" data-scs-animation-in="fadeInUp" data-scs-animation-delay="200">
-                                            <strong>আকর্ষণীয় অফার চলছে</strong>
-                                        </h1>
-                                        <a href="../shop/single-product-fullwidth.html" class=" mb-4 btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16" data-scs-animation-in="fadeInUp" data-scs-animation-delay="300">
-                                            ভিজিট করুন
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-7 col-6 flex-horizontal-center ml-auto ml-md-0" data-scs-animation-in="fadeInRight" data-scs-animation-delay="500">
-                                <img class="img-fluid ml-auto mr-10 mr-wd-auto h-100" src="assets/img/kraken-x-viper-mini-home-banner-982x500.jpg" alt="Image Description">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="js-slide">
-                        <div class="row pt-7 py-md-0">
-                            <div class="d-none d-wd-block offset-1"></div>
-                            <div class="col-xl col col-md-6 mt-md-8 mt-lg-10">
-                                <div class="col-xl col col-md-12 mt-md-8 mt-lg-10">
-                                    <div class="ml-xl-4">
-                                        <h1 class="font-size-46 text-lh-45 font-weight-light mb-4 mt-8" data-scs-animation-in="fadeInUp" data-scs-animation-delay="200">
-                                            <strong>আকর্ষণীয় অফার চলছে</strong>
-                                        </h1>
-                                        <a href="../shop/single-product-fullwidth.html" class=" mb-4 btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16" data-scs-animation-in="fadeInUp" data-scs-animation-delay="300">
-                                            ভিজিট করুন
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-7 col-6 flex-horizontal-center ml-auto ml-md-0" data-scs-animation-in="fadeInRight" data-scs-animation-delay="500">
-                                <img class="img-fluid ml-auto mr-10 mr-wd-auto h-100" src="assets/img/antec-crazy-deal-home-banner-982x500.jpg" alt="Image Description">
                             </div>
                         </div>
                     </div>

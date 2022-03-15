@@ -40,6 +40,16 @@
     <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/css/plugins/extensions/ext-component-toastr.min.css')}}">
     <!-- END: Page CSS-->
 
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/vendors.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/vendors/css/pickers/flatpickr/flatpickr.min.css')}}">
+    <!-- END: Vendor CSS-->
+
+
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('admin_assets/assets/css/style.css')}}">
     <!-- END: Custom CSS-->
@@ -390,16 +400,16 @@
                     <ul class="menu-content">
                         <li class=" {{ (request()->routeIs('termsConditions.create')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('termsConditions.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
                         </li>
-                        <li class="  {{ (request()->routeIs('termsConditions.list')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('termsConditions.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
+                        <li class="{{ (request()->routeIs('termsConditions.list')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('termsConditions.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="nav-item"><a class="d-flex align-items-center" href=""><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Privacy Policy</span></a>
                     <ul class="menu-content">
-                        <li class="nav-item"><a class="d-flex align-items-center" href="{{route('privacyPolicy.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
+                        <li class="{{ (request()->routeIs('privacyPolicy.create')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('privacyPolicy.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
                         </li>
-                        <li class=""><a class="d-flex align-items-center" href="{{route('privacyPolicy.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
+                        <li class="{{ (request()->routeIs('privacyPolicy.list')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('privacyPolicy.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
                         </li>
                     </ul>
                 </li>
@@ -566,8 +576,29 @@
 
     <!-- BEGIN: Page Vendor JS-->
     <script src="{{asset('admin_assets/vendors/js/charts/apexcharts.min.js')}}"></script>
-
     <!-- END: Page Vendor JS-->
+
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/responsive.bootstrap5.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/datatables.checkboxes.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/datatables.buttons.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/jszip.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/pdfmake.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/vfs_fonts.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/buttons.print.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js')}}"></script>
+    <script src="{{asset('admin_assets/vendors/js/pickers/flatpickr/flatpickr.min.js')}}"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="{{asset('admin_assets/js/scripts/tables/table-datatables-basic.js')}}"></script>
+    <!-- END: Page JS-->
+
 
     <!-- BEGIN: Theme JS-->
     <script src="{{asset('admin_assets/js/core/app-menu.min.js')}}"></script>

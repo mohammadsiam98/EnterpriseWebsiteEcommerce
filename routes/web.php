@@ -49,6 +49,17 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::post('/Privacy-Policy/update/{id}', 'App\Http\Controllers\privacyPolicyController@update')->name('privacyPolicy.update');
     Route::delete('/Privacy-Policy/destroy/{id}', 'App\Http\Controllers\privacyPolicyController@destroy')->name('privacyPolicy.destroy');
 
+
+     // These are Banner routes
+     Route::get('/Banner/create', 'App\Http\Controllers\BannerController@create')->name('banner.create');
+     Route::put('/Banner/create', 'App\Http\Controllers\BannerController@store')->name('banner.store');
+     Route::get('/Banner/list', 'App\Http\Controllers\BannerController@list')->name('banner.list');
+     Route::get('/Banner/edit/{id}', 'App\Http\Controllers\BannerController@edit')->name('banner.edit');
+     Route::post('/Banner/update/{id}', 'App\Http\Controllers\BannerController@update')->name('banner.update');
+     Route::delete('/Banner/destroy/{id}', 'App\Http\Controllers\BannerController@destroy')->name('banner.destroy');
+
+
+     // These are Contact routes
     Route::get('/contact/list', 'App\Http\Controllers\ContactPagesController@list')->name('contact.list');
     Route::delete('/contact/destroy/{id}', 'App\Http\Controllers\ContactPagesController@destroy')->name('contact.destroy');
 
