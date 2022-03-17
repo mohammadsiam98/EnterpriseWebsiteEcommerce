@@ -23,6 +23,21 @@ class BannerController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'title' => 'required|min:3|max:100|string',
+            'slug' => 'required|min:3|max:100|string',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
+
+        ],[
+            'title.required' => 'Please write your slider header',
+            'title.min' => 'Slider title should be at least minimum 3 characters',
+            'title.max' => 'Slider title should be maximum 100 characters',
+            'slug.required' => 'Please write your slider slug',
+            'slug.min' => 'Slug title should be at least minimum 3 characters',
+            'slug.max' => 'Slug title should be maximum 20 characters',
+
+            'image.required' => 'Please upload your image'
+        ]);
 
         $banner = new Banner;
         $banner->title = $request->title;

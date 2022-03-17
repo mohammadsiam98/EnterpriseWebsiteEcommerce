@@ -234,6 +234,7 @@
                 </div>
             </a></li>
     </ul>
+
     <ul class="main-search-list-defaultlist-other-list d-none">
         <li class="auto-suggestion justify-content-between"><a class="d-flex align-items-center justify-content-between w-100 py-50">
                 <div class="d-flex justify-content-start"><span class="me-75" data-feather="alert-circle"></span><span>No results found.</span></div>
@@ -319,12 +320,7 @@
     </div>
     <!-- END: Main Menu-->
 
-
     @yield('content')
-    @yield('scripts')
-
-
-
 
     <!-- BEGIN: Customizer-->
     <div class="customizer d-none d-md-block"><a class="customizer-toggle d-flex align-items-center justify-content-center" href="#"><i class="spinner" data-feather="settings"></i></a>
