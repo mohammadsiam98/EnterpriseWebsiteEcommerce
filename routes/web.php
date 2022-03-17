@@ -56,7 +56,7 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
      Route::get('/Banner/list', 'App\Http\Controllers\BannerController@list')->name('banner.list');
      Route::get('/Banner/edit/{id}', 'App\Http\Controllers\BannerController@edit')->name('banner.edit');
      Route::post('/Banner/update/{id}', 'App\Http\Controllers\BannerController@update')->name('banner.update');
-     Route::delete('/Banner/destroy/{id}', 'App\Http\Controllers\BannerController@destroy')->name('banner.destroy');
+     Route::get('/delete/{id}', 'App\Http\Controllers\BannerController@destroy')->name('banner.destroy');
 
 
      // These are Contact routes
