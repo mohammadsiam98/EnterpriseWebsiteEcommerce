@@ -29,6 +29,7 @@ Route::post('/contact/create', 'App\Http\Controllers\ContactPagesController@stor
 ##################################################################################################################################
 Route::group(['middleware'=>['auth','role:superadministrator']],function(){    
     Route::get('/admin/dashboard', 'App\Http\Controllers\DashboardController@index')->name('admin.dashboard');
+     // Route for Logout
     Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
 
     // These are TermsConditions routes
@@ -56,7 +57,11 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
      Route::get('/Banner/list', 'App\Http\Controllers\BannerController@list')->name('banner.list');
      Route::get('/Banner/edit/{id}', 'App\Http\Controllers\BannerController@edit')->name('banner.edit');
      Route::post('/Banner/update/{id}', 'App\Http\Controllers\BannerController@update')->name('banner.update');
-     Route::get('/delete/{id}', 'App\Http\Controllers\BannerController@destroy')->name('banner.destroy');
+     Route::get('/Banner/delete/{id}', 'App\Http\Controllers\BannerController@destroy')->name('banner.destroy');
+     // Route for Active Banner.
+     Route::get('/Banner/statusActive/{id}', 'App\Http\Controllers\BannerController@BannerStatusActive')->name('banner.status.active');
+      // Route for DeActive Banner.
+     Route::get('/Banner/statusInactive/{id}', 'App\Http\Controllers\BannerController@BannerStatusDisable')->name('banner.status.inactive');
 
 
      // These are Contact routes

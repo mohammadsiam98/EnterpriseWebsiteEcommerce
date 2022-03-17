@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Models\Banner;
-
+use Auth;
 class BannerController extends Controller
 {
     public function list()
@@ -80,5 +80,23 @@ class BannerController extends Controller
         $banner = Banner::find($id);
         $banner->delete();
         return back();
+    }
+
+    public function BannerStatusActive($id)
+    {
+        $banner = Banner::where('id',$id)->first();
+        $banner->status = 'active';
+        $banner->save();
+        return redirect()->route('banner.list')->with('success','Banner activated Successfully');
+
+    }
+
+    public function BannerStatusDisable($id)
+    {
+        $banner = Banner::where('id',$id)->first();
+        $banner->status = 'inactive';
+        $banner->save();
+        return redirect()->route('banner.list')->with('success','Banner De-activated Successfully');
+
     }
 }

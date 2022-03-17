@@ -37,6 +37,7 @@
                                 <h4 class="card-title">Create Banner</h4>
                             </a>
                         </div>
+                        @include('alert.messages')
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -45,6 +46,7 @@
                                         <th>Title</th>
                                         <th>Slug</th>
                                         <th>Image</th>
+                                        <th>Status</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -62,6 +64,13 @@
                                                     <img src="{{url($slider->image)}}" style="height: 50px; width:auto" alt="Avatar">
                                                 </div>
                                             </div>
+                                        </td>
+                                        <td>
+                                            @if ($slider->status == 'inactive')
+                                            <a href="{{ route('banner.status.active', $slider->id) }}" class="btn btn-relief-success"> <b>Activate Banner</b> </a>
+                                            @else
+                                            <a href="{{ route('banner.status.inactive', $slider->id) }}" class="btn btn-relief-danger"> <b>Disable Banner</b> </a>
+                                            @endif
                                         </td>
                                         <td>
                                             <div class="row">
