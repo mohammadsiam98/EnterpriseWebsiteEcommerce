@@ -64,6 +64,17 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
      Route::get('/Banner/statusInactive/{id}', 'App\Http\Controllers\BannerController@BannerStatusDisable')->name('banner.status.inactive');
 
 
+
+
+      // These are Category routes
+      Route::get('/Category/create', 'App\Http\Controllers\CategoryController@create')->name('category.create');
+      Route::put('/Category/create', 'App\Http\Controllers\CategoryController@store')->name('category.store');
+      Route::get('/Category/list', 'App\Http\Controllers\CategoryController@list')->name('category.list');
+      Route::get('/Category/edit/{id}', 'App\Http\Controllers\CategoryController@edit')->name('category.edit');
+      Route::post('/Category/update/{id}', 'App\Http\Controllers\CategoryController@update')->name('category.update');
+      Route::get('/Category/delete/{id}', 'App\Http\Controllers\CategoryController@destroy')->name('category.destroy');
+
+
      // These are Contact routes
     Route::get('/contact/list', 'App\Http\Controllers\ContactPagesController@list')->name('contact.list');
     Route::delete('/contact/destroy/{id}', 'App\Http\Controllers\ContactPagesController@destroy')->name('contact.destroy');
