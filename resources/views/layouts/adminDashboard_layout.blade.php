@@ -324,6 +324,15 @@
                     </ul>
                 </li>
 
+                <li class="nav-item"><a class="d-flex align-items-center" href=""><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Sub Category</span></a>
+                    <ul class="menu-content">
+                        <li class="{{ (request()->routeIs('subCategories.create')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('subCategories.create')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Create</span></a>
+                        </li>
+                        <li class="{{ (request()->routeIs('subCategories.list')) ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('subCategories.list')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">List</span></a>
+                        </li>
+                    </ul>
+                </li>
+
 
             </ul>
         </div>

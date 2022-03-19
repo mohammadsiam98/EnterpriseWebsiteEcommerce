@@ -75,6 +75,15 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
       Route::get('/Category/delete/{id}', 'App\Http\Controllers\CategoryController@destroy')->name('category.destroy');
 
 
+      // These are Sub Category routes
+      Route::get('/Sub-Category/create', 'App\Http\Controllers\SubCategoryController@create')->name('subCategories.create');
+      Route::put('/Sub-Category/create', 'App\Http\Controllers\SubCategoryController@store')->name('subCategories.store');
+      Route::get('/Sub-Category/list', 'App\Http\Controllers\SubCategoryController@list')->name('subCategories.list');
+      Route::get('/Sub-Category/edit/{id}', 'App\Http\Controllers\SubCategoryController@edit')->name('subCategories.edit');
+      Route::post('/Sub-Category/update/{id}', 'App\Http\Controllers\SubCategoryController@update')->name('subCategories.update');
+      Route::get('/Sub-Category/delete/{id}', 'App\Http\Controllers\SubCategoryController@destroy')->name('subCategories.destroy');
+
+
      // These are Contact routes
     Route::get('/contact/list', 'App\Http\Controllers\ContactPagesController@list')->name('contact.list');
     Route::delete('/contact/destroy/{id}', 'App\Http\Controllers\ContactPagesController@destroy')->name('contact.destroy');
