@@ -92,9 +92,21 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
        Route::get('/Brands-information/edit/{id}', 'App\Http\Controllers\BrandsController@edit')->name('brands.edit');
        Route::post('/Brands-information/update/{id}', 'App\Http\Controllers\BrandsController@update')->name('brands.update');
        Route::get('/Brands-information/delete/{id}', 'App\Http\Controllers\BrandsController@destroy')->name('brands.destroy');
-       // Route for Brands Banner.
+
+       
+       // These are Suppliers routes
+       Route::get('/Suppliers/create', 'App\Http\Controllers\SuppliersController@create')->name('Suppliers.create');
+       Route::put('/Suppliers/create', 'App\Http\Controllers\SuppliersController@store')->name('Suppliers.store');
+       Route::get('/Suppliers/list', 'App\Http\Controllers\SuppliersController@list')->name('Suppliers.list');
+       Route::get('/Suppliers/edit/{id}', 'App\Http\Controllers\SuppliersController@edit')->name('Suppliers.edit');
+       Route::post('/Suppliers/update/{id}', 'App\Http\Controllers\SuppliersController@update')->name('Suppliers.update');
+       Route::get('/Suppliers/delete/{id}', 'App\Http\Controllers\SuppliersController@destroy')->name('Suppliers.destroy');
+
+
+
+       // Route for Brands Active
        Route::get('/Brands-information/statusActive/{id}', 'App\Http\Controllers\BrandsController@BannerStatusActive')->name('banner.status.active');
-       // Route for Brands Banner.
+       // Route for Brands Inactive.
        Route::get('/Brands-information/statusInactive/{id}', 'App\Http\Controllers\BrandsController@BannerStatusDisable')->name('banner.status.inactive');
        
        // These are Contact routes

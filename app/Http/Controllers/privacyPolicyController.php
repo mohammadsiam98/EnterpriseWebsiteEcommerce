@@ -8,7 +8,8 @@ use Auth;
 use Illuminate\Support\Str;
 
 class privacyPolicyController extends Controller
-{  public function showPage()
+{ 
+    public function showPage()
     {
         $privacyDetails = privacyPolicy::all();
         return view ('pages.privacy_Policies.privacy_policy',compact('privacyDetails'));
