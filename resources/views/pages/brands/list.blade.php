@@ -11,7 +11,7 @@
             <div class="content-header-left col-md-9 col-12 mb-2">
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
-                        <h2 class="content-header-title float-start mb-0">Sub Category Table</h2>
+                        <h2 class="content-header-title float-start mb-0">Brand Details Table</h2>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a href="{{route('subCategories.create')}}">
-                                <h4 class="card-title">Create Sub Category</h4>
+                                <h4 class="card-title">Create Brands</h4>
                             </a>
                         </div>
                         @include('alert.messages')
@@ -37,6 +37,7 @@
                                         <th>Sub Category</th>
                                         <th>Slug</th>
                                         <th>Image</th>
+                                        <th>Status</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -61,6 +62,13 @@
                                                     <img src="{{url($brandDetails->image)}}" style="height: 50px; width:auto" alt="Avatar">
                                                 </div>
                                             </div>
+                                        </td>
+                                        <td>
+                                            @if ($brandDetails->status == 'inactive')
+                                            <a href="{{ route('banner.status.active', $brandDetails->id) }}" class="btn btn-relief-success"> <b>Activate Banner</b> </a>
+                                            @else
+                                            <a href="{{ route('banner.status.inactive', $brandDetails->id) }}" class="btn btn-relief-danger"> <b>Disable Banner</b> </a>
+                                            @endif
                                         </td>
                                         <td>
                                             <div class="row">

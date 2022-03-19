@@ -33,7 +33,7 @@ class BrandsController extends Controller
         $this->validate($request,[
             'brandName' => 'required|unique:Brands|min:2|max:30|string',
             'slug' => 'required|unique:Brands|min:3|max:100|string',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
+            'image' => 'image|mimes:jpg,png,jpeg,gif,svg',
             'category_id' => 'required',
             'subCategory_id' => 'required',
 
@@ -47,7 +47,6 @@ class BrandsController extends Controller
             'slug.min' => 'Slug title should be at least minimum 3 characters',
             'slug.max' => 'Slug title should be maximum 20 characters',
             'slug.unique' => 'This slug is already inserted in the database. Please answer another slug',
-            'image.required' => 'Please upload your image',
             'category_id.required' => 'Please choose in which category does it belong to',
             'subCategory_id.required' => 'Please choose in which category does it belong to'
         ]);
