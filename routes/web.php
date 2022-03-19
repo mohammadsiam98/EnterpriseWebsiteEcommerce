@@ -84,11 +84,22 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
       Route::get('/Sub-Category/delete/{id}', 'App\Http\Controllers\SubCategoryController@destroy')->name('subCategories.destroy');
 
 
-     // These are Contact routes
-    Route::get('/contact/list', 'App\Http\Controllers\ContactPagesController@list')->name('contact.list');
-    Route::delete('/contact/destroy/{id}', 'App\Http\Controllers\ContactPagesController@destroy')->name('contact.destroy');
 
-
+       // These are Brands routes
+       Route::get('/Brands-information/create', 'App\Http\Controllers\BrandsController@create')->name('brands.create');
+       Route::put('/Brands-information/create', 'App\Http\Controllers\BrandsController@store')->name('brands.store');
+       Route::get('/Brands-information/list', 'App\Http\Controllers\BrandsController@list')->name('brands.list');
+       Route::get('/Brands-information/edit/{id}', 'App\Http\Controllers\BrandsController@edit')->name('brands.edit');
+       Route::post('/Brands-information/update/{id}', 'App\Http\Controllers\BrandsController@update')->name('brands.update');
+       Route::get('/Brands-information/delete/{id}', 'App\Http\Controllers\BrandsController@destroy')->name('brands.destroy');
+       // Route for Brands Banner.
+       Route::get('/Brands-information/statusActive/{id}', 'App\Http\Controllers\BrandsController@BannerStatusActive')->name('banner.status.active');
+       // Route for Brands Banner.
+       Route::get('/Brands-information/statusInactive/{id}', 'App\Http\Controllers\BrandsController@BannerStatusDisable')->name('banner.status.inactive');
+       
+       // These are Contact routes
+       Route::get('/contact/list', 'App\Http\Controllers\ContactPagesController@list')->name('contact.list');
+       Route::delete('/contact/destroy/{id}', 'App\Http\Controllers\ContactPagesController@destroy')->name('contact.destroy');
 
 });
 

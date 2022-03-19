@@ -32,36 +32,41 @@
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Sub-category</th>
+                                        <th>Brand Name</th>
                                         <th>Category</th>
+                                        <th>Sub Category</th>
                                         <th>Slug</th>
                                         <th>Image</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($subCategories as $key=>$subCategory)
+                                    @foreach ($Brands as $key=>$brandDetails)
                                     <tr>
                                         <td>
                                             <span class="fw-bold">{{$key+1}}</span>
                                         </td>
-                                        <td>{{$subCategory->subCategoryName}}</td>
+                                        <td>{{$brandDetails->brandName}}</td>
 
                                         <td>
-                                            <span class="badge rounded-pill badge-light-primary me-1">{{$subCategory->category->categoryName }}</span></td>
-                                        <td>{{$subCategory->slug}}</td>
+                                            <span class="badge rounded-pill badge-light-primary me-1">{{$brandDetails->category->categoryName }}</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge rounded-pill badge-light-primary me-1">{{$brandDetails->SubCategory->subCategoryName }}</span>
+                                        </td>
+                                        <td>{{$brandDetails->slug}}</td>
                                         <td>
                                             <div class="avatar-group">
                                                 <div data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class=" pull-up my-0">
-                                                    <img src="{{url($subCategory->image)}}" style="height: 50px; width:auto" alt="Avatar">
+                                                    <img src="{{url($brandDetails->image)}}" style="height: 50px; width:auto" alt="Avatar">
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="row">
                                                 <div>
-                                                    <a class="btn btn-relief-primary" href="{{route('subCategories.edit' , $subCategory->id)}}">Edit</a>
-                                                    <a class="btn btn-relief-danger" href="{{route('subCategories.destroy' , $subCategory->id)}}">Delete</a>
+                                                    <a class="btn btn-relief-primary" href="{{route('brands.edit' , $brandDetails->id)}}">Edit</a>
+                                                    <a class="btn btn-relief-danger" href="{{route('brands.destroy' , $brandDetails->id)}}">Delete</a>
                                                 </div>
                                             </div>
                                         </td>
