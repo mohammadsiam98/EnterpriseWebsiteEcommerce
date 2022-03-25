@@ -38,7 +38,7 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/Terms_Conditions/list', 'App\Http\Controllers\termsConditionsController@list')->name('termsConditions.list');
     Route::get('/Terms_Conditions/edit/{id}', 'App\Http\Controllers\termsConditionsController@edit')->name('termsConditions.edit');
     Route::post('/Terms_Conditions/update/{id}', 'App\Http\Controllers\termsConditionsController@update')->name('termsConditions.update');
-    Route::delete('/Terms_Conditions/destroy/{id}', 'App\Http\Controllers\termsConditionsController@destroy')->name('termsConditions.destroy');
+    Route::get('/Terms_Conditions/destroy/{id}', 'App\Http\Controllers\termsConditionsController@destroy')->name('termsConditions.destroy');
 
 
     // These are TermsConditions routes

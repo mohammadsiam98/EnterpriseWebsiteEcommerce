@@ -2,113 +2,102 @@
 @section('StarTech', 'Leading Computer, Laptop & Gadget Shop in Bangladesh')
 
 @section('content')
-<!-- BEGIN: Content-->
-<div class="app-content content ">
-    <div class="content-overlay"></div>
-    <div class="header-navbar-shadow"></div>
-    <div class="content-wrapper container-xxl p-0">
+<link href="{{asset('admin_assets/plugins/file-upload/file-upload-with-preview.min.css')}}" rel="stylesheet" type="text/css" />
 
-        <div class="content-body">
-            <!-- Validation -->
-            <section class="bs-validation">
-                <div class="row">
-                    <!-- jQuery Validation -->
-                    <div class="col-md-12 col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Banner Insert</h4>
+<!--  BEGIN CONTENT AREA  -->
+<div id="content" class="main-content">
+    <div class="container">
+        <div class="container">
+            <div class="page-header">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h4>Upload CLient's Company Images</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @include('alert.messages')
+
+            <div class="row">
+                <div id="modalOptionalSizes" class="col-lg-12 layout-spacing">
+                    <div class="statbox widget box box-shadow">
+                        <div class="widget-content widget-content-area">
+                            <div class="text-center">
+                                <!-- Lage modal -->
+                                <button type="button" class="btn btn-primary mb-2 mr-2" data-toggle="modal" data-target=".bd-example-modal-lg">Instructions</button>
                             </div>
-                            <div>
-                                @if($errors->has('title'))
-                                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                                    <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                                    </symbol>
-                                </svg>
 
-                                <div class="alert alert-danger d-flex align-items-center alert-dismissible fade show" role="alert" style="padding: 8px; margin:30px;">
-                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
-                                        <use xlink:href="#exclamation-triangle-fill" /></svg>
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    <div>
-                                        <strong>{{$errors->first('title')}}</strong>
+
+                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="myLargeModalLabel">Read The Guidelines</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="modal-text">Mauris mi tellus, pharetra vel mattis sed, tempus ultrices eros. Phasellus egestas sit amet velit sed luctus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Vivamus ultrices sed urna ac pulvinar. Ut sit amet ullamcorper mi.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
+                                        </div>
                                     </div>
-
                                 </div>
-                                @endif
-                            </div>
-
-
-                            <div>
-                                @if($errors->has('slug'))
-                                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                                    <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                                    </symbol>
-                                </svg>
-
-                                <div class="alert alert-danger d-flex align-items-center alert-dismissible fade show" role="alert" style="padding: 8px; margin:30px;">
-                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
-                                        <use xlink:href="#exclamation-triangle-fill" /></svg>
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    <div>
-                                        <strong>{{$errors->first('slug')}}</strong>
-                                    </div>
-
-                                </div>
-                                @endif
-                            </div>
-
-                            <div>
-                                @if($errors->has('image'))
-                                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                                    <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                                    </symbol>
-                                </svg>
-
-                                <div class="alert alert-danger d-flex align-items-center alert-dismissible fade show" role="alert" style="padding: 8px; margin:30px;">
-                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
-                                        <use xlink:href="#exclamation-triangle-fill" /></svg>
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    <div>
-                                        <strong>{{$errors->first('image')}}</strong>
-                                    </div>
-
-                                </div>
-                                @endif
-                            </div>
-
-                            <div class="card-body">
-                                <form id="" action="{{route('banner.store')}}" method="post" enctype="multipart/form-data">
-                                    @csrf
-                                    @method('put')
-                                    <div class="mb-1">
-                                        <label class="form-label" for="basic-addon-name">Title</label>
-                                        <input type="text" name="title" id="basic-addon-name" class="form-control" placeholder="Enter the title of your slider" aria-label="Name" style="font-size: 20px;" aria-describedby="basic-addon-name" />
-                                    </div>
-                                    <div class="mb-1">
-                                        <label class="form-label" for="basic-addon-name">Slug</label>
-                                        <input type="text" name="slug" id="basic-addon-name" class="form-control" placeholder="Enter the slug of this title" aria-label="Name" style="font-size: 20px;" aria-describedby="basic-addon-name" />
-                                    </div>
-                                    <div class="mb-1">
-                                        <label class="form-label" for="basic-addon-name">Image</label>
-                                        <input type="file" name="image" id="basic-addon-name" class="form-control" placeholder="Enter your image" aria-label="Name" aria-describedby="basic-addon-name" />
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary" name="submit" value="Submit">Submit</button>
-                                </form>
                             </div>
                         </div>
                     </div>
-                    <!-- /jQuery Validation -->
                 </div>
-            </section>
-            <!-- /Validation -->
+            </div>
+            <div class="row">
+                <div id="flHorizontalForm" class="col-lg-12 layout-spacing">
+                    <div class="statbox widget box box-shadow">
+                        <div class="widget-content widget-content-area">
+                            <form action="{{route('banner.store')}}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                {{method_field('PUT')}}
 
+                                <div class="form-group mb-3">
+                                    <h4>Banner Name</h4>
+                                    <input type="text" name="title" class="form-control" id="planName" aria-describedby="planName" placeholder="Write your banner title">
+                                    <small id="planName" class="form-text text-muted">Write Your banner title in the Input Field.</small>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <h4>Banner Slug</h4>
+                                    <input type="text" name="slug" class="form-control" id="planName" aria-describedby="planName" placeholder="Write your banner slug">
+                                    <small id="planName" class="form-text text-muted">Write Your banner slug in the Input Field.</small>
+                                </div>
+
+                                <div class="custom-file-container" data-upload-id="myFirstImage">
+                                    <label>Upload (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
+                                    <label class="custom-file-container__custom-file">
+                                        <input type="file" name="image" value="" />
+                                        <span class="custom-file-container__custom-file__custom-file-control"></span>
+                                    </label>
+                                    <div class="custom-file-container__image-preview"></div>
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-3 btn-lg">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<!-- END: Content-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!--  END CONTENT AREA  -->
+
+
+<script src="{{asset('admin_assets/plugins/file-upload/file-upload-with-preview.min.js')}}"></script>
+<script>
+    var firstUpload = new FileUploadWithPreview('myFirstImage')
+
+</script>
+
 @endsection

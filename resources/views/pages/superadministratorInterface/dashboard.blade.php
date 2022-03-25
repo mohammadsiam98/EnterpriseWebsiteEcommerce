@@ -4,744 +4,650 @@
 
 @section('content')
 
-<!-- BEGIN: Content-->
-<div class="app-content content ">
-    <div class="content-overlay"></div>
-    <div class="header-navbar-shadow"></div>
-    <div class="content-wrapper container-xxl p-0">
-        <div class="content-header row">
+
+<!--  BEGIN CONTENT PART  -->
+<div id="content" class="main-content">
+    <div class="layout-px-spacing">
+
+        <div class="row layout-top-spacing">
+
+            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                <div class="widget widget-one">
+                    <div class="widget-heading">
+                        <h6 class="">Statistics</h6>
+
+                        <div class="task-action">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="pendingTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                        <circle cx="12" cy="12" r="1"></circle>
+                                        <circle cx="19" cy="12" r="1"></circle>
+                                        <circle cx="5" cy="12" r="1"></circle>
+                                    </svg>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="pendingTask" style="will-change: transform;">
+                                    <a class="dropdown-item" href="javascript:void(0);">View</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Download</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="w-chart">
+
+                        <div class="w-chart-section total-visits-content">
+                            <div class="w-detail">
+                                <p class="w-title">Total Visits</p>
+                                <p class="w-stats">423,964</p>
+                            </div>
+                            <div class="w-chart-render-one">
+                                <div id="total-users"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="w-chart-section paid-visits-content">
+                            <div class="w-detail">
+                                <p class="w-title">Paid Visits</p>
+                                <p class="w-stats">7,929</p>
+                            </div>
+                            <div class="w-chart-render-one">
+                                <div id="paid-visits"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                <div class="widget widget-card-four">
+                    <div class="widget-content">
+                        <div class="w-header">
+                            <div class="w-info">
+                                <h6 class="value">Expenses</h6>
+                            </div>
+                            <div class="task-action">
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle" href="#" role="button" id="pendingTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                            <circle cx="12" cy="12" r="1"></circle>
+                                            <circle cx="19" cy="12" r="1"></circle>
+                                            <circle cx="5" cy="12" r="1"></circle>
+                                        </svg>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="pendingTask" style="will-change: transform;">
+                                        <a class="dropdown-item" href="javascript:void(0);">This Week</a>
+                                        <a class="dropdown-item" href="javascript:void(0);">Last Week</a>
+                                        <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-content">
+
+                            <div class="w-info">
+                                <p class="value">$ 45,141 <span>this week</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up">
+                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                        <polyline points="17 6 23 6 23 12"></polyline>
+                                    </svg></p>
+                            </div>
+
+                        </div>
+
+                        <div class="w-progress-stats">
+                            <div class="progress">
+                                <div class="progress-bar bg-gradient-secondary" role="progressbar" style="width: 57%" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                            <div class="">
+                                <div class="w-icon">
+                                    <p>57%</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                <div class="widget widget-account-invoice-two">
+                    <div class="widget-content">
+                        <div class="account-box">
+                            <div class="info">
+                                <div class="inv-title">
+                                    <h5 class="">Total Balance</h5>
+                                </div>
+                                <div class="inv-balance-info">
+
+                                    <p class="inv-balance">$ 41,741.42</p>
+
+                                    <span class="inv-stats balance-credited">+ 2453</span>
+
+                                </div>
+                            </div>
+                            <div class="acc-action">
+                                <div class="">
+                                    <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        </svg></a>
+                                    <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card">
+                                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                                        </svg></a>
+                                </div>
+                                <a href="javascript:void(0);">Upgrade</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                <div class="widget widget-chart-three">
+                    <div class="widget-heading">
+                        <div class="">
+                            <h5 class="">Unique Visitors</h5>
+                        </div>
+
+                        <div class="dropdown ">
+                            <a class="dropdown-toggle" href="#" role="button" id="uniqueVisitors" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="19" cy="12" r="1"></circle>
+                                    <circle cx="5" cy="12" r="1"></circle>
+                                </svg>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="uniqueVisitors">
+                                <a class="dropdown-item" href="javascript:void(0);">View</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Update</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget-content">
+                        <div id="uniqueVisits"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                <div class="widget widget-activity-five">
+
+                    <div class="widget-heading">
+                        <h5 class="">Activity Log</h5>
+
+                        <div class="task-action">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="pendingTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                        <circle cx="12" cy="12" r="1"></circle>
+                                        <circle cx="19" cy="12" r="1"></circle>
+                                        <circle cx="5" cy="12" r="1"></circle>
+                                    </svg>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="pendingTask" style="will-change: transform;">
+                                    <a class="dropdown-item" href="javascript:void(0);">View All</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Mark as Read</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget-content">
+
+                        <div class="w-shadow-top"></div>
+
+                        <div class="mt-container mx-auto">
+                            <div class="timeline-line">
+
+                                <div class="item-timeline timeline-new">
+                                    <div class="t-dot">
+                                        <div class="t-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            </svg></div>
+                                    </div>
+                                    <div class="t-content">
+                                        <div class="t-uppercontent">
+                                            <h5>New project created : <a href="javscript:void(0);"><span>[Cork Admin Template]</span></a></h5>
+                                        </div>
+                                        <p>27 Feb, 2020</p>
+                                    </div>
+                                </div>
+
+                                <div class="item-timeline timeline-new">
+                                    <div class="t-dot">
+                                        <div class="t-success"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+                                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                <polyline points="22,6 12,13 2,6"></polyline>
+                                            </svg></div>
+                                    </div>
+                                    <div class="t-content">
+                                        <div class="t-uppercontent">
+                                            <h5>Mail sent to <a href="javascript:void(0);">HR</a> and <a href="javascript:void(0);">Admin</a></h5>
+                                        </div>
+                                        <p>28 Feb, 2020</p>
+                                    </div>
+                                </div>
+
+                                <div class="item-timeline timeline-new">
+                                    <div class="t-dot">
+                                        <div class="t-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg></div>
+                                    </div>
+                                    <div class="t-content">
+                                        <div class="t-uppercontent">
+                                            <h5>Server Logs Updated</h5>
+                                        </div>
+                                        <p>27 Feb, 2020</p>
+                                    </div>
+                                </div>
+
+                                <div class="item-timeline timeline-new">
+                                    <div class="t-dot">
+                                        <div class="t-danger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg></div>
+                                    </div>
+                                    <div class="t-content">
+                                        <div class="t-uppercontent">
+                                            <h5>Task Completed : <a href="javscript:void(0);"><span>[Backup Files EOD]</span></a></h5>
+                                        </div>
+                                        <p>01 Mar, 2020</p>
+                                    </div>
+                                </div>
+
+                                <div class="item-timeline timeline-new">
+                                    <div class="t-dot">
+                                        <div class="t-warning"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                                <polyline points="13 2 13 9 20 9"></polyline>
+                                            </svg></div>
+                                    </div>
+                                    <div class="t-content">
+                                        <div class="t-uppercontent">
+                                            <h5>Documents Submitted from <a href="javascript:void(0);">Sara</a></h5>
+                                            <span class=""></span>
+                                        </div>
+                                        <p>10 Mar, 2020</p>
+                                    </div>
+                                </div>
+
+                                <div class="item-timeline timeline-new">
+                                    <div class="t-dot">
+                                        <div class="t-dark"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server">
+                                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                                <line x1="6" y1="6" x2="6" y2="6"></line>
+                                                <line x1="6" y1="18" x2="6" y2="18"></line>
+                                            </svg></div>
+                                    </div>
+                                    <div class="t-content">
+                                        <div class="t-uppercontent">
+                                            <h5>Server rebooted successfully</h5>
+                                            <span class=""></span>
+                                        </div>
+                                        <p>06 Apr, 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-shadow-bottom"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                <div class="widget-four">
+                    <div class="widget-heading">
+                        <h5 class="">Visitors by Browser</h5>
+                    </div>
+                    <div class="widget-content">
+                        <div class="vistorsBrowser">
+                            <div class="browser-list">
+                                <div class="w-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chrome">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <line x1="21.17" y1="8" x2="12" y2="8"></line>
+                                        <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+                                        <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+                                    </svg>
+                                </div>
+                                <div class="w-browser-details">
+                                    <div class="w-browser-info">
+                                        <h6>Chrome</h6>
+                                        <p class="browser-count">65%</p>
+                                    </div>
+                                    <div class="w-browser-stats">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 65%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="browser-list">
+                                <div class="w-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-compass">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                                    </svg>
+                                </div>
+                                <div class="w-browser-details">
+
+                                    <div class="w-browser-info">
+                                        <h6>Safari</h6>
+                                        <p class="browser-count">25%</p>
+                                    </div>
+
+                                    <div class="w-browser-stats">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 35%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="browser-list">
+                                <div class="w-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                    </svg>
+                                </div>
+                                <div class="w-browser-details">
+
+                                    <div class="w-browser-info">
+                                        <h6>Others</h6>
+                                        <p class="browser-count">15%</p>
+                                    </div>
+
+                                    <div class="w-browser-stats">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-gradient-warning" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="row widget-statistic">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 layout-spacing">
+                        <div class="widget widget-one_hybrid widget-followers">
+                            <div class="widget-heading">
+                                <div class="w-title">
+                                    <div class="w-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="">
+                                        <p class="w-value">31.6K</p>
+                                        <h5 class="">Followers</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-content">
+                                <div class="w-chart">
+                                    <div id="hybrid_followers"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 layout-spacing">
+                        <div class="widget widget-one_hybrid widget-referral">
+                            <div class="widget-heading">
+                                <div class="w-title">
+                                    <div class="w-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+                                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="">
+                                        <p class="w-value">1,900</p>
+                                        <h5 class="">Referral</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-content">
+                                <div class="w-chart">
+                                    <div id="hybrid_followers1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 layout-spacing">
+                        <div class="widget widget-one_hybrid widget-engagement">
+                            <div class="widget-heading">
+                                <div class="w-title">
+                                    <div class="w-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle">
+                                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="">
+                                        <p class="w-value">18.2%</p>
+                                        <h5 class="">Engagement</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-content">
+                                <div class="w-chart">
+                                    <div id="hybrid_followers3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                <div class="widget widget-card-one">
+                    <div class="widget-content">
+
+                        <div class="media">
+                            <div class="w-img">
+                                <img src="assets/img/90x90.jpg" alt="avatar">
+                            </div>
+                            <div class="media-body">
+                                <h6>Jimmy Turner</h6>
+                                <p class="meta-date-time">Monday, Nov 18</p>
+                            </div>
+                        </div>
+
+                        <p>"Duis aute irure dolor" in reprehenderit in voluptate velit esse cillum "dolore eu fugiat" nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+
+                        <div class="w-action">
+                            <div class="card-like">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up">
+                                    <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                                </svg>
+                                <span>551 Likes</span>
+                            </div>
+
+                            <div class="read-more">
+                                <a href="javascript:void(0);">Read More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right">
+                                        <polyline points="13 17 18 12 13 7"></polyline>
+                                        <polyline points="6 17 11 12 6 7"></polyline>
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                <div class="widget widget-card-two">
+                    <div class="widget-content">
+
+                        <div class="media">
+                            <div class="w-img">
+                                <img src="assets/img/90x90.jpg" alt="avatar">
+                            </div>
+                            <div class="media-body">
+                                <h6>Dev Summit - New York</h6>
+                                <p class="meta-date-time">Bronx, NY</p>
+                            </div>
+                        </div>
+
+                        <div class="card-bottom-section">
+                            <h5>4 Members Going</h5>
+                            <div class="img-group">
+                                <img src="assets/img/90x90.jpg" alt="avatar">
+                                <img src="assets/img/90x90.jpg" alt="avatar">
+                                <img src="assets/img/90x90.jpg" alt="avatar">
+                                <img src="assets/img/90x90.jpg" alt="avatar">
+                            </div>
+                            <a href="javascript:void(0);" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                <div class="widget widget-five">
+
+                    <div class="widget-heading">
+
+                        <a href="javascript:void(0)" class="task-info">
+
+                            <div class="usr-avatar">
+                                <span>FD</span>
+                            </div>
+
+                            <div class="w-title">
+
+                                <h5>Figma Design</h5>
+                                <span>Design Reset</span>
+
+                            </div>
+
+                        </a>
+
+                        <div class="task-action">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="pendingTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal">
+                                        <circle cx="12" cy="12" r="1"></circle>
+                                        <circle cx="19" cy="12" r="1"></circle>
+                                        <circle cx="5" cy="12" r="1"></circle>
+                                    </svg>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="pendingTask" style="will-change: transform;">
+                                    <a class="dropdown-item" href="javascript:void(0);">View Project</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Edit Project</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Mark as Done</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="widget-content">
+
+                        <p>Doloribus nisi vel suscipit modi, optio ex repudiandae voluptatibus officiis commodi. Nesciunt quas aut neque incidunt!</p>
+
+                        <div class="progress-data">
+
+                            <div class="progress-info">
+                                <div class="task-count"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square">
+                                        <polyline points="9 11 12 14 22 4"></polyline>
+                                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                    </svg>
+                                    <p>5 Tasks</p>
+                                </div>
+                                <div class="progress-stats">
+                                    <p>86.2%</p>
+                                </div>
+                            </div>
+
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 65%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="meta-info">
+
+                            <div class="due-time">
+                                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg> 3 Days Left</p>
+                            </div>
+
+
+                            <div class="avatar--group">
+
+                                <div class="avatar translateY-axis more-group">
+                                    <span class="avatar-title">+6</span>
+                                </div>
+                                <div class="avatar translateY-axis">
+                                    <img alt="avatar" src="assets/img/90x90.jpg" />
+                                </div>
+                                <div class="avatar translateY-axis">
+                                    <img alt="avatar" src="assets/img/90x90.jpg" />
+                                </div>
+                                <div class="avatar translateY-axis">
+                                    <img alt="avatar" src="assets/img/90x90.jpg" />
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="content-body">
-            <!-- Dashboard Ecommerce Starts -->
-            <section id="dashboard-ecommerce">
-                <div class="row match-height">
-                    <!-- Medal Card -->
-                    <div class="col-xl-4 col-md-6 col-12">
-                        <div class="card card-congratulation-medal">
-                            <div class="card-body">
-                                <h5>Congratulations 🎉 John!</h5>
-                                <p class="card-text font-small-3">You have won gold medal</p>
-                                <h3 class="mb-75 mt-2 pt-50">
-                                    <a href="#">$48.9k</a>
-                                </h3>
-                                <button type="button" class="btn btn-primary">View Sales</button>
-                                <img src="{{asset('admin_assets/images/illustration/badge.svg')}}" class="congratulation-medal" alt="Medal Pic" />
-                            </div>
-                        </div>
-                    </div>
-                    <!--/ Medal Card -->
 
-                    <!-- Statistics Card -->
-                    <div class="col-xl-8 col-md-6 col-12">
-                        <div class="card card-statistics">
-                            <div class="card-header">
-                                <h4 class="card-title">Statistics</h4>
-                                <div class="d-flex align-items-center">
-                                    <p class="card-text font-small-2 me-25 mb-0">Updated 1 month ago</p>
-                                </div>
-                            </div>
-                            <div class="card-body statistics-body">
-                                <div class="row">
-                                    <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-xl-0">
-                                        <div class="d-flex flex-row">
-                                            <div class="avatar bg-light-primary me-2">
-                                                <div class="avatar-content">
-                                                    <i data-feather="trending-up" class="avatar-icon"></i>
-                                                </div>
-                                            </div>
-                                            <div class="my-auto">
-                                                <h4 class="fw-bolder mb-0">230k</h4>
-                                                <p class="card-text font-small-3 mb-0">Sales</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-xl-0">
-                                        <div class="d-flex flex-row">
-                                            <div class="avatar bg-light-info me-2">
-                                                <div class="avatar-content">
-                                                    <i data-feather="user" class="avatar-icon"></i>
-                                                </div>
-                                            </div>
-                                            <div class="my-auto">
-                                                <h4 class="fw-bolder mb-0">8.549k</h4>
-                                                <p class="card-text font-small-3 mb-0">Customers</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-sm-0">
-                                        <div class="d-flex flex-row">
-                                            <div class="avatar bg-light-danger me-2">
-                                                <div class="avatar-content">
-                                                    <i data-feather="box" class="avatar-icon"></i>
-                                                </div>
-                                            </div>
-                                            <div class="my-auto">
-                                                <h4 class="fw-bolder mb-0">1.423k</h4>
-                                                <p class="card-text font-small-3 mb-0">Products</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-sm-6 col-12">
-                                        <div class="d-flex flex-row">
-                                            <div class="avatar bg-light-success me-2">
-                                                <div class="avatar-content">
-                                                    <i data-feather="dollar-sign" class="avatar-icon"></i>
-                                                </div>
-                                            </div>
-                                            <div class="my-auto">
-                                                <h4 class="fw-bolder mb-0">$9745</h4>
-                                                <p class="card-text font-small-3 mb-0">Revenue</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/ Statistics Card -->
-                </div>
+    </div>
 
-                <div class="row match-height">
-                    <div class="col-lg-4 col-12">
-                        <div class="row match-height">
-                            <!-- Bar Chart - Orders -->
-                            <div class="col-lg-6 col-md-3 col-6">
-                                <div class="card">
-                                    <div class="card-body pb-50">
-                                        <h6>Orders</h6>
-                                        <h2 class="fw-bolder mb-1">2,76k</h2>
-                                        <div id="statistics-order-chart"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/ Bar Chart - Orders -->
-
-                            <!-- Line Chart - Profit -->
-                            <div class="col-lg-6 col-md-3 col-6">
-                                <div class="card card-tiny-line-stats">
-                                    <div class="card-body pb-50">
-                                        <h6>Profit</h6>
-                                        <h2 class="fw-bolder mb-1">6,24k</h2>
-                                        <div id="statistics-profit-chart"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/ Line Chart - Profit -->
-
-                            <!-- Earnings Card -->
-                            <div class="col-lg-12 col-md-6 col-12">
-                                <div class="card earnings-card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4 class="card-title mb-1">Earnings</h4>
-                                                <div class="font-small-2">This Month</div>
-                                                <h5 class="mb-1">$4055.56</h5>
-                                                <p class="card-text text-muted font-small-2">
-                                                    <span class="fw-bolder">68.2%</span><span> more earnings than last month.</span>
-                                                </p>
-                                            </div>
-                                            <div class="col-6">
-                                                <div id="earnings-chart"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/ Earnings Card -->
-                        </div>
-                    </div>
-
-                    <!-- Revenue Report Card -->
-                    <div class="col-lg-8 col-12">
-                        <div class="card card-revenue-budget">
-                            <div class="row mx-0">
-                                <div class="col-md-8 col-12 revenue-report-wrapper">
-                                    <div class="d-sm-flex justify-content-between align-items-center mb-3">
-                                        <h4 class="card-title mb-50 mb-sm-0">Revenue Report</h4>
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex align-items-center me-2">
-                                                <span class="bullet bullet-primary font-small-3 me-50 cursor-pointer"></span>
-                                                <span>Earning</span>
-                                            </div>
-                                            <div class="d-flex align-items-center ms-75">
-                                                <span class="bullet bullet-warning font-small-3 me-50 cursor-pointer"></span>
-                                                <span>Expense</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="revenue-report-chart"></div>
-                                </div>
-                                <div class="col-md-4 col-12 budget-wrapper">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-outline-primary btn-sm dropdown-toggle budget-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            2020
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">2020</a>
-                                            <a class="dropdown-item" href="#">2019</a>
-                                            <a class="dropdown-item" href="#">2018</a>
-                                        </div>
-                                    </div>
-                                    <h2 class="mb-25">$25,852</h2>
-                                    <div class="d-flex justify-content-center">
-                                        <span class="fw-bolder me-25">Budget:</span>
-                                        <span>56,800</span>
-                                    </div>
-                                    <div id="budget-chart"></div>
-                                    <button type="button" class="btn btn-primary">Increase Budget</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/ Revenue Report Card -->
-                </div>
-
-                <div class="row match-height">
-                    <!-- Company Table Card -->
-                    <div class="col-lg-8 col-12">
-                        <div class="card card-company-table">
-                            <div class="card-body p-0">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Company</th>
-                                                <th>Category</th>
-                                                <th>Views</th>
-                                                <th>Revenue</th>
-                                                <th>Sales</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="{{asset('admin_assets/images/icons/toolbox.svg')}}" alt="Toolbar svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Dixons</div>
-                                                            <div class="font-small-2 text-muted">meguc@ruj.io</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-primary me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="monitor" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Technology</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">23.4k</span>
-                                                        <span class="font-small-2 text-muted">in 24 hours</span>
-                                                    </div>
-                                                </td>
-                                                <td>$891.2</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">68%</span>
-                                                        <i data-feather="trending-down" class="text-danger font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="{{asset('admin_assets/images/icons/parachute.svg')}}" alt="Parachute svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Motels</div>
-                                                            <div class="font-small-2 text-muted">vecav@hodzi.co.uk</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-success me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="coffee" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Grocery</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">78k</span>
-                                                        <span class="font-small-2 text-muted">in 2 days</span>
-                                                    </div>
-                                                </td>
-                                                <td>$668.51</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">97%</span>
-                                                        <i data-feather="trending-up" class="text-success font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="{{asset('admin_assets/images/icons/brush.svg')}}" alt="Brush svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Zipcar</div>
-                                                            <div class="font-small-2 text-muted">davcilse@is.gov</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-warning me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="watch" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Fashion</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">162</span>
-                                                        <span class="font-small-2 text-muted">in 5 days</span>
-                                                    </div>
-                                                </td>
-                                                <td>$522.29</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">62%</span>
-                                                        <i data-feather="trending-up" class="text-success font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="{{asset('admin_assets/images/icons/star.svg')}}" alt="Star svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Owning</div>
-                                                            <div class="font-small-2 text-muted">us@cuhil.gov</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-primary me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="monitor" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Technology</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">214</span>
-                                                        <span class="font-small-2 text-muted">in 24 hours</span>
-                                                    </div>
-                                                </td>
-                                                <td>$291.01</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">88%</span>
-                                                        <i data-feather="trending-up" class="text-success font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="{{asset('admin_assets/images/icons/book.svg')}}" alt="Book svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Cafés</div>
-                                                            <div class="font-small-2 text-muted">pudais@jife.com</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-success me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="coffee" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Grocery</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">208</span>
-                                                        <span class="font-small-2 text-muted">in 1 week</span>
-                                                    </div>
-                                                </td>
-                                                <td>$783.93</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">16%</span>
-                                                        <i data-feather="trending-down" class="text-danger font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="{{asset('admin_assets/images/icons/rocket.svg')}}" alt="Rocket svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Kmart</div>
-                                                            <div class="font-small-2 text-muted">bipri@cawiw.com</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-warning me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="watch" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Fashion</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">990</span>
-                                                        <span class="font-small-2 text-muted">in 1 month</span>
-                                                    </div>
-                                                </td>
-                                                <td>$780.05</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">78%</span>
-                                                        <i data-feather="trending-up" class="text-success font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar rounded">
-                                                            <div class="avatar-content">
-                                                                <img src="{{asset('admin_assets/images/icons/rocket.svg')}}" alt="Speaker svg" />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="fw-bolder">Payers</div>
-                                                            <div class="font-small-2 text-muted">luk@izug.io</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="avatar bg-light-warning me-1">
-                                                            <div class="avatar-content">
-                                                                <i data-feather="watch" class="font-medium-3"></i>
-                                                            </div>
-                                                        </div>
-                                                        <span>Fashion</span>
-                                                    </div>
-                                                </td>
-                                                <td class="text-nowrap">
-                                                    <div class="d-flex flex-column">
-                                                        <span class="fw-bolder mb-25">12.9k</span>
-                                                        <span class="font-small-2 text-muted">in 12 hours</span>
-                                                    </div>
-                                                </td>
-                                                <td>$531.49</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="fw-bolder me-1">42%</span>
-                                                        <i data-feather="trending-up" class="text-success font-medium-1"></i>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/ Company Table Card -->
-
-                    <!-- Developer Meetup Card -->
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card card-developer-meetup">
-                            <div class="meetup-img-wrapper rounded-top text-center">
-                                <img src="{{asset('admin_assets/images/illustration/email.svg')}}" alt="Meeting Pic" height="170" />
-                            </div>
-                            <div class="card-body">
-                                <div class="meetup-header d-flex align-items-center">
-                                    <div class="meetup-day">
-                                        <h6 class="mb-0">THU</h6>
-                                        <h3 class="mb-0">24</h3>
-                                    </div>
-                                    <div class="my-auto">
-                                        <h4 class="card-title mb-25">Developer Meetup</h4>
-                                        <p class="card-text mb-0">Meet world popular developers</p>
-                                    </div>
-                                </div>
-                                <div class="mt-0">
-                                    <div class="avatar float-start bg-light-primary rounded me-1">
-                                        <div class="avatar-content">
-                                            <i data-feather="calendar" class="avatar-icon font-medium-3"></i>
-                                        </div>
-                                    </div>
-                                    <div class="more-info">
-                                        <h6 class="mb-0">Sat, May 25, 2020</h6>
-                                        <small>10:AM to 6:PM</small>
-                                    </div>
-                                </div>
-                                <div class="mt-2">
-                                    <div class="avatar float-start bg-light-primary rounded me-1">
-                                        <div class="avatar-content">
-                                            <i data-feather="map-pin" class="avatar-icon font-medium-3"></i>
-                                        </div>
-                                    </div>
-                                    <div class="more-info">
-                                        <h6 class="mb-0">Central Park</h6>
-                                        <small>Manhattan, New york City</small>
-                                    </div>
-                                </div>
-                                <div class="avatar-group">
-                                    <div data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="bottom" title="Billy Hopkins" class="avatar pull-up">
-                                        <img src="{{asset('admin_assets/images/portrait/small/avatar-s-9.jpg')}}" alt="Avatar" width="33" height="33" />
-                                    </div>
-                                    <div data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="bottom" title="Amy Carson" class="avatar pull-up">
-                                        <img src="{{asset('admin_assets/images/portrait/small/avatar-s-6.jpg')}}" alt="Avatar" width="33" height="33" />
-                                    </div>
-                                    <div data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="bottom" title="Brandon Miles" class="avatar pull-up">
-                                        <img src="{{asset('admin_assets/images/portrait/small/avatar-s-8.jpg')}}" alt="Avatar" width="33" height="33" />
-                                    </div>
-                                    <div data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="bottom" title="Daisy Weber" class="avatar pull-up">
-                                        <img src="{{asset('admin_assets/images/portrait/small/avatar-s-20.jpg')}}" alt="Avatar" width="33" height="33" />
-                                    </div>
-                                    <div data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="bottom" title="Jenny Looper" class="avatar pull-up">
-                                        <img src="{{asset('admin_assets/images/portrait/small/avatar-s-20.jpg')}}" alt="Avatar" width="33" height="33" />
-                                    </div>
-                                    <h6 class="align-self-center cursor-pointer ms-50 mb-0">+42</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/ Developer Meetup Card -->
-
-                    <!-- Browser States Card -->
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card card-browser-states">
-                            <div class="card-header">
-                                <div>
-                                    <h4 class="card-title">Browser States</h4>
-                                    <p class="card-text font-small-2">Counter August 2020</p>
-                                </div>
-                                <div class="dropdown chart-dropdown">
-                                    <i data-feather="more-vertical" class="font-medium-3 cursor-pointer" data-bs-toggle="dropdown"></i>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <a class="dropdown-item" href="#">Last 28 Days</a>
-                                        <a class="dropdown-item" href="#">Last Month</a>
-                                        <a class="dropdown-item" href="#">Last Year</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="browser-states">
-                                    <div class="d-flex">
-                                        <img src="{{asset('admin_assets/images/portrait/small/avatar-s-20.jpg')}}" class="rounded me-1" height="30" alt="Google Chrome" />
-                                        <h6 class="align-self-center mb-0">Google Chrome</h6>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <div class="fw-bold text-body-heading me-1">54.4%</div>
-                                        <div id="browser-state-chart-primary"></div>
-                                    </div>
-                                </div>
-                                <div class="browser-states">
-                                    <div class="d-flex">
-                                        <img src="{{asset('admin_assets/images/portrait/small/avatar-s-20.jpg')}}" class="rounded me-1" height="30" alt="Mozila Firefox" />
-                                        <h6 class="align-self-center mb-0">Mozila Firefox</h6>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <div class="fw-bold text-body-heading me-1">6.1%</div>
-                                        <div id="browser-state-chart-warning"></div>
-                                    </div>
-                                </div>
-                                <div class="browser-states">
-                                    <div class="d-flex">
-                                        <img src="{{asset('admin_assets/images/portrait/small/avatar-s-20.jpg')}}" class="rounded me-1" height="30" alt="Apple Safari" />
-                                        <h6 class="align-self-center mb-0">Apple Safari</h6>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <div class="fw-bold text-body-heading me-1">14.6%</div>
-                                        <div id="browser-state-chart-secondary"></div>
-                                    </div>
-                                </div>
-                                <div class="browser-states">
-                                    <div class="d-flex">
-                                        <img src="{{asset('admin_assets/images/portrait/small/avatar-s-20.jpg')}}" class="rounded me-1" height="30" alt="Internet Explorer" />
-                                        <h6 class="align-self-center mb-0">Internet Explorer</h6>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <div class="fw-bold text-body-heading me-1">4.2%</div>
-                                        <div id="browser-state-chart-info"></div>
-                                    </div>
-                                </div>
-                                <div class="browser-states">
-                                    <div class="d-flex">
-                                        <img src="{{asset('admin_assets/images/portrait/small/avatar-s-20.jpg')}}" class="rounded me-1" height="30" alt="Opera Mini" />
-                                        <h6 class="align-self-center mb-0">Opera Mini</h6>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <div class="fw-bold text-body-heading me-1">8.4%</div>
-                                        <div id="browser-state-chart-danger"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/ Browser States Card -->
-
-                    <!-- Goal Overview Card -->
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card">
-                            <div class="card-header d-flex justify-content-between align-items-center">
-                                <h4 class="card-title">Goal Overview</h4>
-                                <i data-feather="help-circle" class="font-medium-3 text-muted cursor-pointer"></i>
-                            </div>
-                            <div class="card-body p-0">
-                                <div id="goal-overview-radial-bar-chart" class="my-2"></div>
-                                <div class="row border-top text-center mx-0">
-                                    <div class="col-6 border-end py-1">
-                                        <p class="card-text text-muted mb-0">Completed</p>
-                                        <h3 class="fw-bolder mb-0">786,617</h3>
-                                    </div>
-                                    <div class="col-6 py-1">
-                                        <p class="card-text text-muted mb-0">In Progress</p>
-                                        <h3 class="fw-bolder mb-0">13,561</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/ Goal Overview Card -->
-
-                    <!-- Transaction Card -->
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card card-transaction">
-                            <div class="card-header">
-                                <h4 class="card-title">Transactions</h4>
-                                <div class="dropdown chart-dropdown">
-                                    <i data-feather="more-vertical" class="font-medium-3 cursor-pointer" data-bs-toggle="dropdown"></i>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <a class="dropdown-item" href="#">Last 28 Days</a>
-                                        <a class="dropdown-item" href="#">Last Month</a>
-                                        <a class="dropdown-item" href="#">Last Year</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="transaction-item">
-                                    <div class="d-flex">
-                                        <div class="avatar bg-light-primary rounded float-start">
-                                            <div class="avatar-content">
-                                                <i data-feather="pocket" class="avatar-icon font-medium-3"></i>
-                                            </div>
-                                        </div>
-                                        <div class="transaction-percentage">
-                                            <h6 class="transaction-title">Wallet</h6>
-                                            <small>Starbucks</small>
-                                        </div>
-                                    </div>
-                                    <div class="fw-bolder text-danger">- $74</div>
-                                </div>
-                                <div class="transaction-item">
-                                    <div class="d-flex">
-                                        <div class="avatar bg-light-success rounded float-start">
-                                            <div class="avatar-content">
-                                                <i data-feather="check" class="avatar-icon font-medium-3"></i>
-                                            </div>
-                                        </div>
-                                        <div class="transaction-percentage">
-                                            <h6 class="transaction-title">Bank Transfer</h6>
-                                            <small>Add Money</small>
-                                        </div>
-                                    </div>
-                                    <div class="fw-bolder text-success">+ $480</div>
-                                </div>
-                                <div class="transaction-item">
-                                    <div class="d-flex">
-                                        <div class="avatar bg-light-danger rounded float-start">
-                                            <div class="avatar-content">
-                                                <i data-feather="dollar-sign" class="avatar-icon font-medium-3"></i>
-                                            </div>
-                                        </div>
-                                        <div class="transaction-percentage">
-                                            <h6 class="transaction-title">Paypal</h6>
-                                            <small>Add Money</small>
-                                        </div>
-                                    </div>
-                                    <div class="fw-bolder text-success">+ $590</div>
-                                </div>
-                                <div class="transaction-item">
-                                    <div class="d-flex">
-                                        <div class="avatar bg-light-warning rounded float-start">
-                                            <div class="avatar-content">
-                                                <i data-feather="credit-card" class="avatar-icon font-medium-3"></i>
-                                            </div>
-                                        </div>
-                                        <div class="transaction-percentage">
-                                            <h6 class="transaction-title">Mastercard</h6>
-                                            <small>Ordered Food</small>
-                                        </div>
-                                    </div>
-                                    <div class="fw-bolder text-danger">- $23</div>
-                                </div>
-                                <div class="transaction-item">
-                                    <div class="d-flex">
-                                        <div class="avatar bg-light-info rounded float-start">
-                                            <div class="avatar-content">
-                                                <i data-feather="trending-up" class="avatar-icon font-medium-3"></i>
-                                            </div>
-                                        </div>
-                                        <div class="transaction-percentage">
-                                            <h6 class="transaction-title">Transfer</h6>
-                                            <small>Refund</small>
-                                        </div>
-                                    </div>
-                                    <div class="fw-bolder text-success">+ $98</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/ Transaction Card -->
-                </div>
-            </section>
-            <!-- Dashboard Ecommerce ends -->
-
+    <div class="footer-wrapper">
+        <div class="footer-section f-section-1">
+            <p class="">Copyright © 2021 <a target="_blank" href="https://designreset.com">DesignReset</a>, All rights reserved.</p>
+        </div>
+        <div class="footer-section f-section-2">
+            <p class="">Coded with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg></p>
         </div>
     </div>
 </div>
-<!-- END: Content-->
+<!--  END CONTENT PART  -->
+
 @endsection

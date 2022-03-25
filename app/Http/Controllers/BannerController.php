@@ -5,7 +5,9 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Models\Banner;
 use Auth;
-class BannerController extends Controller
+use SweetAlert;
+
+class BannerController extends Controller 
 {
     public function list()
     {
@@ -46,7 +48,7 @@ class BannerController extends Controller
         Storage::putFile('public/img/',$image);
         $banner->image ="storage/img/".$image->hashName();
         $banner->save();
-        return redirect()->route('banner.create')->with('success','New Details created Successfully');
+        return redirect()->route('banner.create')->with('success','Sliders details inserted Successfully');
 
     }
 
